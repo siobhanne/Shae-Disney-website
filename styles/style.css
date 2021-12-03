@@ -10,6 +10,7 @@
 :root {
   --bodyTekst: #253b56;
   --pSize: 14px;
+  --bodyFamily: 'Avenir', Helvetica;
 
 
 
@@ -33,7 +34,7 @@
 /* H1, H2, H3, H4, H5, H6, p, a */
 html, body {
   /* Avenir checken - kent ie niet? */
-  font-family: 'Avenir', Helvetica;
+  font-family: var(--bodyFamily);
   color: var(--bodyTekst);
 
   width: 100%;
@@ -59,6 +60,11 @@ h3 {
 p {
   font-size: 14px;
 }
+
+button, input, select, header nav button, header nav a, header nav label, header div p {
+  cursor: pointer;
+}
+
 
 /* component maken? */
 /* .secundaireButton {
@@ -164,10 +170,7 @@ header nav ul {
   left: 0; right: 0;
   top: 0; bottom: 0;
 
-  width: 375px;
-  /* niet nodig */
-  /* height: 620px; */
-  /* background-color: lightblue; */
+  width: 100%;
 
   list-style: none;
   position: fixed;
@@ -218,7 +221,7 @@ header nav a {
 
 /* alle li'tjes */
 header nav ul li {
-  margin-bottom: 42px;
+  /* margin-bottom: 42px; */
   grid-column-start: 1;
   grid-column-end: 3;
 }
@@ -301,7 +304,7 @@ header nav a img {
 /* HEADER SEARCH */
 header nav input {
   display: none;
-  transition: 1s ease;
+  /* transition: 1s ease; */
 }
 
 header nav.toonSearch input {
@@ -421,7 +424,7 @@ main a:first-of-type img {
 /**********/
 
 section:first-of-type {
-  background-color: pink;
+  background-color: white;
   margin: 0 2em;
   padding: 8px 24px;
 
@@ -464,6 +467,8 @@ main section:first-of-type form select {
   max-width: 264px;
   height: 40px;
   font-size: var(--pSize);
+  font-family: var(--bodyFamily);
+  background-color: white;
 }
 
 
@@ -516,6 +521,8 @@ section:first-of-type nav ul li {
   font-weight: 900;
   display: flex;
   justify-content: center;
+
+  font-family: var(--bodyFamily);
 }
 
 section:first-of-type p {
@@ -554,29 +561,16 @@ section:first-of-type form fieldset:nth-of-type(3) {
   grid-column-end: 3;
 }
 
-
-
-
-
-
-
-/* kies je data
-section:first-of-type form fieldset:first-of-type input::before {
-  content: url("../images/dataForm.png");
-  margin: 0 8px;
+section:first-of-type p {
+  font-size: 12px;
+  text-align: center;
+  display: flex;
+  /* flex-wrap: nowrap; */
+  justify-content: center;
+  /* align-items: center; */
+  margin: 0 auto 12px auto;
+  /* width: 100%; */
 }
-
-hotel en resorts
-section:first-of-type form fieldset:nth-of-type(2) select .eerste::before {
-  content: url("../images/hotelForm.png");
-}
-
-kamers en gasten
-section:first-of-type form fieldset:nth-of-type(3) select::before {
-  content: url("../images/kamersForm.png");
-} */
-
-
 
 
 /* button  */
@@ -584,6 +578,47 @@ section:first-of-type form button {
   height: 40px;
   margin: 20px 0;
   width: 100%;
+
+  background-image: var(--primaireButton);
+  color: var(--primaireButtonText);
+  font-family: var(--bodyFamily);
+  font-weight: 700;
+
+  border: none;
+  border-radius: 20px;
+}
+
+
+/* icoon voor kies je data */
+main section:first-of-type form fieldset:nth-of-type(1) input {
+  background-image: url("../images/dataForm.png");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 8px;
+  background-size: 30px;
+  padding-left: 40px;
+}
+
+
+/* icoon voor hotels en resorts */
+main section:first-of-type form fieldset:nth-of-type(2) select {
+  background-image: url("../images/hotelForm.png");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 8px;
+  background-size: 30px;
+  padding-left: 40px;
+}
+
+
+/* icoon voor kamers en gasten */
+main section:first-of-type form fieldset:nth-of-type(3) select {
+  background-image: url("../images/kamerForm.png");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 8px;
+  background-size: 30px;
+  padding-left: 40px;
 }
 
 
