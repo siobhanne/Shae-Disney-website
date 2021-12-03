@@ -1,0 +1,499 @@
+/* CSS Document */
+*, *::after, *::before {
+  box-sizing:border-box;  
+
+  margin: 0;
+  padding: 0;
+}
+
+
+:root {
+  --bodyTekst: #253b56;
+  --pSize: 14px;
+
+
+
+  --primaireButton: linear-gradient(73deg, rgb(0, 51, 204), rgb(0, 91, 255));
+/* transition: none 0s ease 0s  */
+  --primaireButtonText: white;
+
+  /* transition: none 0s ease 0s  */
+  --secundaireButton: 2px solid rgb(0, 70, 228);
+  --secundaireButtonTekst: rgb(0, 70, 228);
+
+}
+
+
+/**********************************************************************************************************/
+
+/**********/
+/* ALGEMENE STIJLEN */
+/**********/
+
+/* H1, H2, H3, H4, H5, H6, p, a */
+html, body {
+  /* Avenir checken - kent ie niet? */
+  font-family: 'Avenir', Helvetica;
+  color: var(--bodyTekst);
+
+  width: 375px;
+  /* height: auto; */
+}
+
+/* NEW */
+/* als de toonmenu op de body staat kant er niet gescrolled worden */
+body.toonMenu {
+  overflow:hidden;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+p {
+  font-size: 14px;
+}
+
+/* component maken? */
+.secundaireButton {
+  font-size: 14px;
+  color: var(--secundaireButtonTekst);
+
+  border: var(--secundaireButton);
+  border-radius: 20px;
+
+  width: 220px;
+  height: 40px;
+
+  padding: 8px 20px 6px 20px;
+}
+
+
+section {
+  padding: 32px 0;
+}
+
+main {
+  background-color: #f7f7f7;
+  top: 0;
+}
+
+main > section:nth-of-type(even) {
+  /* background-color: #f7f7f7; */
+  background-color: white;
+}
+
+/**********************************************************************************************************/
+
+/**********/
+/* NAVIGATIE / HEADER */
+/**********/
+
+/* header:not(header nav) {
+  z-index: 200;
+} */
+
+/* NEW */
+/* de hele header staat op z-index 100 en dus boven de main */
+header {
+  position: relative;
+  z-index: 100;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: white;
+
+  /* verplaatst naar de div in de header */
+  /* border-bottom: 1px solid rgb(228, 232, 236); */
+
+  width: 375px;
+  height: 60px;
+
+  padding: 10px;
+
+  /* niet nodig */
+  /* z-index: 100; */
+}
+
+
+header nav button::before {
+  content:'\2630';
+  font-size: 22px;
+}
+
+/* CHANGE */
+/* de class staat op de body niet op de nav */
+body.toonMenu header nav button::before {
+  content: url("../images/xMenu.svg");
+  font-size: 22px;
+}
+
+header nav button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  font-size: 11px;
+  color: var(--bodyTekst);
+
+  background-color: transparent;
+  border: none;
+  appearance:none;
+
+  /* z-index: 100; */
+  /* position: absolute; */
+}
+
+header nav ul {
+  margin: 0;
+  /* de padding top is groter om de translatey(0) te compenseren */
+  /* padding: 40px 40px 0px 40px; */
+  padding: 100px 40px 0px 40px;
+
+  left: 0; right: 0;
+  top: 0; bottom: 0;
+
+  width: 375px;
+  /* niet nodig */
+  /* height: 620px; */
+  /* background-color: lightblue; */
+
+  list-style: none;
+  position: fixed;
+  
+  transform: translateY(-100%);
+  transition: .5s ease-in-out;
+
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF;
+
+  /* NEW */
+  /* de ul staat onder zijn parent (de nav) */
+  z-index: -1;
+  /* niet nodig - anders opgelost */
+  /* overscroll-behavior: contain; */
+  overflow: scroll;
+    
+}
+
+/* CHANGE */
+body.toonMenu header nav ul {
+  /* de ul heeft meer padding en kan dus bovenaan beginnen */
+  /* transform: translateY(60px); */
+  transform: translateY(0);
+}
+
+
+
+/* pijl naar rechts */
+header nav ul li:not(li:nth-of-type(1), li:nth-of-type(2), li:nth-of-type(3)) a::after {
+  content: url("../images/pijlMenu.png");
+  margin-left: 8px;
+  position: relative;
+  top: 4px;
+}
+
+/* alle tekst / A'tjes */
+header nav a {
+  text-decoration: none;
+  color: var(--bodyTekst);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: var(--pSize);
+}
+
+/* alle li'tjes */
+header nav ul li {
+  margin-bottom: 42px;
+}
+
+/* taalinstellingen */
+header nav ul li:first-of-type a img {
+  width: 30px;
+  height: 30px;
+
+  border: 2px solid white;
+  border-radius: 16px;
+  box-shadow: rgb(9 17 41 / 10%) 0px 2px 4px;
+}
+
+/* inloggen */
+header nav ul li:nth-of-type(2) a::before {
+  content: url("../images/inloggenMenu.svg");
+  margin-right: 7px;
+}
+
+header nav ul li:nth-of-type(2) a {
+  display: flex;
+  align-items: center;
+
+  font-size: 12px;
+  text-transform: none;
+
+  width: 100px;
+  height: 30px;
+
+  border: 2px solid white;
+  border-radius: 30px;
+  box-shadow: rgb(9 17 41 / 10%) 0px 2px 4px;
+}
+
+/* taalinstellingen en inloggen naast elkaar */
+
+
+/* parktijden */
+header nav ul li:nth-of-type(3) a::before {
+  content: url("../images/parktijdenMenu.svg");
+  margin-right: 7px;
+}
+
+header nav ul li:nth-of-type(3) a {
+  display: flex;
+  align-items: center;
+
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: none;
+  color: #8A9BAE;
+
+  width: 115px;
+  height: 30px;
+
+  border: 2px solid white;
+  border-radius: 30px;
+  box-shadow: rgb(9 17 41 / 10%) 0px 2px 4px;
+}
+
+
+/* logo */
+header nav a img {
+  width: 126px;
+  height: auto;
+}
+
+
+/* *******************************************xx       HIER WAS JE */
+/* *******************************************xx       HIER WAS JE */
+/* *******************************************xx       HIER WAS JE */
+/* HEADER SEARCH */
+
+header nav input {
+  display: none;
+  transition: 1s ease;
+}
+
+header nav.toonSearch input {
+  display: block;
+  width: 311px;
+}
+
+header nav.toonSearch a img {
+  display: none;
+}
+
+
+header nav label::before {
+  content: url("../images/searchIcon.png");
+}
+
+
+
+/* HEADER DIV INFOBLOK */
+header div {
+  width: 375px;
+  height: 56px;
+
+  padding: 10px;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  border-left: 6px solid rgb(118, 64, 161);
+  
+  /* background-image: linear-gradient(
+    179.34deg, rgb(118, 64, 161) 0%, rgb(0, 70, 228) 100%);
+     */
+
+  /* NEW */
+  /* de lijn staat nu hier in plaats van bij de nav (wel boven ipv onder) */
+  border-top: 1px solid rgb(228, 232, 236);
+  
+  /* de div staat onder zijn parent (de nav) en onder de ul (die heeft z-index -1) */
+  position: relative;
+  z-index:-2;
+}
+
+header div p {
+  margin: 0;
+  text-align: center;
+
+  width: 241px;
+  font-weight: 600;
+}
+
+header div::before {
+  content: url("../images/infoIcon.svg");
+  height: 24px;
+  
+}
+
+header div::after {
+  content: url("../images/pijlIcon.svg");
+  height: 14px;
+}
+
+
+
+/* TINK ACHTERGROND */
+header > a img {
+  width: 100%;
+  margin: 0;
+
+  /* NEW */
+  /* de img staat onder zijn parent (de nav) en onder de ul (die heeft z-index -1) */
+  position: relative;
+  z-index:-2;
+}
+
+
+
+
+/**********************************************************************************************************/
+
+/**********/
+/* FOOTER */
+/**********/
+
+
+
+
+
+/**********/
+/* SECTION 8 - DROPDOWN */
+/**********/
+
+
+
+
+/**********/
+/* SECTION 9 - DISCLAIMER */
+/**********/
+
+
+
+
+/**********************************************************************************************************/
+
+
+/**********/
+/* MAIN */
+/**********/
+
+
+
+
+/**********/
+/* SECTION 1  - FORM*/
+/**********/
+
+section:first-of-type {
+  background-color: pink;
+  margin: 0 2em;
+  padding: 8px 24px;
+
+  transform: translatey(-4em);
+
+  box-sizing: border-box;
+  border-radius: 16px;
+  box-shadow: 0px 4px 32px rgb(0 0 0 / 10%);
+}
+
+section:first-of-type form fieldset {
+  border-style: none;
+}
+
+section:first-of-type form fieldset legend {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+section:first-of-type form fieldset legend select {
+  width: 264px;
+  height: 40px;
+}
+
+section:first-of-type form fieldset legend input:nth-of-type(2), section section form fieldset legend select:nth-of-type(1) {
+  margin-bottom: 16px;
+}
+
+/* kies je data */
+section:first-of-type form fieldset legend input:nth-of-type(1), section section form fieldset legend input:nth-of-type(2) {
+  height: 40px;
+  /* width: 100px; */
+  /* display: ; */
+  /* flex-wrap: wrap; */
+}
+
+
+section:first-of-type form fieldset legend button {
+  width: 264px;
+  height: 40px;
+
+  margin: 20px 0;
+}
+
+
+
+/**********/
+/* SECTION 2 - VIDEO */
+/**********/
+
+
+
+
+/**********/
+/* SECTION 3 - SLIDER */
+/**********/
+
+
+
+
+/**********/
+/* SECTION 4 - ARTICLES */
+/**********/
+
+main section:nth-of-type(4) img {
+  width: 375px;
+}
+
+
+
+/**********/
+/* SECTION 5 - VIDEO TIPS */
+/**********/
+
+
+
+
+/**********/
+/* SECTION 6 - ARTICLE NIEUWS */
+/**********/
+
+
+
+/**********/
+/* SECTION 7 - VRAGEN */
+/**********/
