@@ -36,7 +36,7 @@ html, body {
   font-family: 'Avenir', Helvetica;
   color: var(--bodyTekst);
 
-  width: 375px;
+  width: 100%;
   /* height: auto; */
 }
 
@@ -82,6 +82,7 @@ section {
 main {
   background-color: #f7f7f7;
   top: 0;
+  margin-top: -1em;
 }
 
 main > section:nth-of-type(even) {
@@ -116,7 +117,7 @@ header nav {
   /* verplaatst naar de div in de header */
   /* border-bottom: 1px solid rgb(228, 232, 236); */
 
-  width: 375px;
+  width: 100%;
   height: 60px;
 
   padding: 10px;
@@ -174,8 +175,10 @@ header nav ul {
   transform: translateY(-100%);
   transition: .5s ease-in-out;
 
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 1em;
+
   background-color: #FFF;
 
   /* NEW */
@@ -216,7 +219,18 @@ header nav a {
 /* alle li'tjes */
 header nav ul li {
   margin-bottom: 42px;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
+
+header nav ul li:first-of-type {
+  grid-column-end: 2;
+}
+
+header nav ul li:nth-of-type(2) {
+  grid-column-start: 2;
+}
+
 
 /* taalinstellingen */
 header nav ul li:first-of-type a img {
@@ -283,11 +297,8 @@ header nav a img {
 }
 
 
-/* *******************************************xx       HIER WAS JE */
-/* *******************************************xx       HIER WAS JE */
-/* *******************************************xx       HIER WAS JE */
-/* HEADER SEARCH */
 
+/* HEADER SEARCH */
 header nav input {
   display: none;
   transition: 1s ease;
@@ -311,7 +322,7 @@ header nav label::before {
 
 /* HEADER DIV INFOBLOK */
 header div {
-  width: 375px;
+  width: 100%;
   height: 56px;
 
   padding: 10px;
@@ -332,6 +343,7 @@ header div {
   
   /* de div staat onder zijn parent (de nav) en onder de ul (die heeft z-index -1) */
   position: relative;
+  background-color: white;
   z-index:-2;
 }
 
@@ -357,14 +369,14 @@ header div::after {
 
 
 /* TINK ACHTERGROND */
-header > a img {
+main a:first-of-type img {
   width: 100%;
   margin: 0;
 
   /* NEW */
   /* de img staat onder zijn parent (de nav) en onder de ul (die heeft z-index -1) */
-  position: relative;
-  z-index:-2;
+  /* position: relative; */
+  z-index:-5;
 }
 
 
@@ -418,41 +430,160 @@ section:first-of-type {
   box-sizing: border-box;
   border-radius: 16px;
   box-shadow: 0px 4px 32px rgb(0 0 0 / 10%);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 section:first-of-type form fieldset {
   border-style: none;
 }
 
-section:first-of-type form fieldset legend {
+
+main section:first-of-type form {
+  max-width: 264px;
+  width: 100%;
+  margin: 0 auto;
+
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+main section:first-of-type form legend {
+  font-size: 12px;
+  font-weight: 700;
+
+  margin: 0 0 6px 6px;
+}
+
+
+/* alle selectievakjes */
+main section:first-of-type form input, 
+main section:first-of-type form select {
+  width: 100%;
+  max-width: 264px;
+  height: 40px;
+  font-size: var(--pSize);
+}
+
+
+/* border gefikst */
+main section:first-of-type form input:first-of-type {
+  border: 1px solid rgb(138, 155, 174);
+  border-radius: 4px 0 0 4px;
+}
+
+main section:first-of-type form input:nth-of-type(2) {
+  border: 1px solid rgb(138, 155, 174);
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+}
+
+main section:first-of-type form select {
+  border: 1px solid rgb(138, 155, 174);
+  border-radius: 4px;
+}
+
+
+
+section:first-of-type form fieldset {
+  margin-top: 16px;
+}
+
+
+/* grid */
+section:first-of-type nav ul {
+  list-style: none;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  justify-content: center;
+  border-bottom: 2px solid #004BE9;
+
+  max-width: 196px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 8px;
 }
 
-section:first-of-type form fieldset legend select {
-  width: 264px;
+section:first-of-type nav {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+section:first-of-type nav ul li {
+  max-width: 98px;
+  width: 100%;
+  font-size: 11px;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+}
+
+section:first-of-type p {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+section:first-of-type form fieldset:first-of-type {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+section:first-of-type div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+section:first-of-type div input:first-of-type {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+section:first-of-type div input:nth-of-type(2) {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+section:first-of-type form fieldset:nth-of-type(2) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+
+section:first-of-type form fieldset:nth-of-type(3) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+
+
+
+
+
+
+/* kies je data
+section:first-of-type form fieldset:first-of-type input::before {
+  content: url("../images/dataForm.png");
+  margin: 0 8px;
+}
+
+hotel en resorts
+section:first-of-type form fieldset:nth-of-type(2) select .eerste::before {
+  content: url("../images/hotelForm.png");
+}
+
+kamers en gasten
+section:first-of-type form fieldset:nth-of-type(3) select::before {
+  content: url("../images/kamersForm.png");
+} */
+
+
+
+
+/* button  */
+section:first-of-type form button {
   height: 40px;
-}
-
-section:first-of-type form fieldset legend input:nth-of-type(2), section section form fieldset legend select:nth-of-type(1) {
-  margin-bottom: 16px;
-}
-
-/* kies je data */
-section:first-of-type form fieldset legend input:nth-of-type(1), section section form fieldset legend input:nth-of-type(2) {
-  height: 40px;
-  /* width: 100px; */
-  /* display: ; */
-  /* flex-wrap: wrap; */
-}
-
-
-section:first-of-type form fieldset legend button {
-  width: 264px;
-  height: 40px;
-
   margin: 20px 0;
+  width: 100%;
 }
 
 
@@ -468,6 +599,10 @@ section:first-of-type form fieldset legend button {
 /* SECTION 3 - SLIDER */
 /**********/
 
+main section:nth-of-type(3) img {
+  width: 100%;
+}
+
 
 
 
@@ -476,7 +611,7 @@ section:first-of-type form fieldset legend button {
 /**********/
 
 main section:nth-of-type(4) img {
-  width: 375px;
+  width: 100%;
 }
 
 

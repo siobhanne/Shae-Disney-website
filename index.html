@@ -49,56 +49,67 @@
 			<p>Alles wat je moet weten voordat je naar Disneyland Paris komt</p>
 		</div>
 
+	</header>
+
+	<main>
+
 		<a href="https://www.disneylandparis.com/nl-nl/aanbod/geef-disneyland-paris-cadeau/">
 			<img src="./images/tinkAchtergrond.png" alt="achtergrond met tinkerbel en doornroosjes kasteel">
 		</a>
 
 
-	</header>
 
-	<main>
 		<!-- SECTION 1 - FORM -->
 		<section>
 			<nav>
 				<ul>
-					<li>Verblijf + Tickets</li>
-					<li>Tickets</li>
+					<div>
+						<li>Verblijf + Tickets</li>
+						<li>Tickets</li>
+					</div>
 				</ul>
 			</nav>
 
 			<form>
 				<fieldset>
-					<legend>
-						<label>Kies je data</label>
+					<legend>Kies je data</legend>
+					<div class="test">
 						<input type="date" name="aankomstdatum" value="Aankomstdatum" min="2021-11-25">
 						<input type="date" name="vertrekdatum" value="vertrekdatum" min="2021-11-26">
-
-						<label>Hotels & Resorts</label>
-						<select id="HotelsResorts" name="HotelsResorts">
-							<option value="alleHotels">Alle Hotels</option>
-							<option value="Disney's Davy Crockett Ranch">Disney's Davy Crockett Ranch</option>
-							<option value="Disney's Hotel New York">Disney's Hotel New York</option>
-							<option value="Disney's Sequoia Lodge">Disney's Sequoia Lodge</option>
-							<option value="Disney's Hotel Santa Fe">Disney's Hotel Santa Fe</option>
-							<option value="Dream Castle Fabulous Hotels Group">Dream Castle Fabulous Hotels Group
-							</option>
-						</select>
-
-						<label>Kamers en gasten</label>
-						<select id="kamersGasten" name="kamersGasten">
-							<option value="1 kamer 2 Gasten">1 kamer 2 Gasten</option>
-							<option value="1 kamer 1 gast">1 kamer 1 gast</option>
-							<option value="1 kamer 3 gasten">1 kamer 3 gasten</option>
-							<option value="1 kamer 4 gasten">1 kamer 4 gasten</option>
-							<option value="2 kamers 5 gasten">2 kamers 5 gasten</option>
-							<option value="2 kamer 6 gasten">2 kamer 6 gasten</option>
-						</select>
-
-						<!-- Primaire button -->
-						<button type="submit">Vind prijzen</button>
-					</legend>
+					</div>
 				</fieldset>
+
+				<fieldset>
+					<legend>Hotels & Resorts</legend>
+					<select id="HotelsResorts" name="HotelsResorts">
+						<option value="alleHotels" class="eerste">Alle Hotels</option>
+						<option value="Disney's Davy Crockett Ranch">Disney's Davy Crockett Ranch</option>
+						<option value="Disney's Hotel New York">Disney's Hotel New York</option>
+						<option value="Disney's Sequoia Lodge">Disney's Sequoia Lodge</option>
+						<option value="Disney's Hotel Santa Fe">Disney's Hotel Santa Fe</option>
+						<option value="Dream Castle Fabulous Hotels Group">Dream Castle Fabulous Hotels Group
+						</option>
+					</select>
+				</fieldset>
+
+				<fieldset>
+					<legend>Kamers en gasten</legend>
+					<select id="kamersGasten" name="kamersGasten">
+						<option value="1 kamer 2 Gasten">1 kamer 2 Gasten</option>
+						<option value="1 kamer 1 gast">1 kamer 1 gast</option>
+						<option value="1 kamer 3 gasten">1 kamer 3 gasten</option>
+						<option value="1 kamer 4 gasten">1 kamer 4 gasten</option>
+						<option value="2 kamers 5 gasten">2 kamers 5 gasten</option>
+						<option value="2 kamer 6 gasten">2 kamer 6 gasten</option>
+					</select>
+				</fieldset>
+
+
+				<!-- Primaire button -->
+				<button type="submit">Vind prijzen</button>
+
 			</form>
+
 			<p>Op zoek naar het ideale moment om te komen? <a
 					href="https://www.disneylandparis.com/nl-nl/prijsschatting-kalender-disneyland-paris/">Vergelijk
 					nu de prijzen!</a></p>
@@ -126,7 +137,7 @@
 		</section>
 
 
-		
+
 
 		<!-- SECTION 3 - SLIDER -->
 		<section>
@@ -256,13 +267,13 @@
 
 	<footer>
 		<!-- SECTION 8 - DROPDOWN -->
-		<section>
-			<!-- uitklap informatie -->
+		<!-- <section>
+			uitklap informatie
 			<h2>juridische informatie</h2>
 			<a href="">Verkoopvoorwaarden en verzekering</a>
 			<a href="">Verkoopvoorwaarden en verzekering</a>
 			<a href="">Verkoopvoorwaarden en verzekering</a>
-		</section>
+		</section> -->
 
 		<!-- divider -->
 		<h2>Blijf op de hoogte</h2>
