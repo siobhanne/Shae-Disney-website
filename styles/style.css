@@ -12,7 +12,10 @@
   --pSize: 14px;
   --bodyFamily: 'Avenir', Helvetica;
 
+  --whiteSpace: 0.75em;
 
+  --mainButton: 220px;
+  --mainButtonBold: 700;
 
   --primaireButton: linear-gradient(73deg, rgb(0, 51, 204), rgb(0, 91, 255));
 /* transition: none 0s ease 0s  */
@@ -22,6 +25,8 @@
   --secundaireButton: 2px solid rgb(0, 70, 228);
   --secundaireButtonTekst: rgb(0, 70, 228);
 
+
+  --verloopje: linear-gradient(179.34deg, rgb(118, 64, 161) 0%, rgb(0, 70, 228) 100%);
 }
 
 
@@ -180,7 +185,10 @@ header nav ul {
 
   display: grid;
   grid-template-columns: min-content 1fr;
-  gap: 1em;
+  grid-template-rows: repeat(6, min-content);
+  /* grid-template-rows: repeat(52px) ; */
+  row-gap: 28px;
+  column-gap: 1em;
 
   background-color: #FFF;
 
@@ -239,6 +247,8 @@ header nav ul li:nth-of-type(2) {
 header nav ul li:first-of-type a img {
   width: 30px;
   height: 30px;
+
+  margin-bottom: 8px;
 
   border: 2px solid white;
   border-radius: 16px;
@@ -334,7 +344,8 @@ header div {
   justify-content: space-evenly;
   align-items: center;
 
-  border-left: 6px solid rgb(118, 64, 161);
+  /* border-left: 6px solid rgb(118, 64, 161); */
+  background:var(--verloopje) left center / calc(var(--whiteSpace) / 2) 100% no-repeat;
   
   /* background-image: linear-gradient(
     179.34deg, rgb(118, 64, 161) 0%, rgb(0, 70, 228) 100%);
@@ -506,7 +517,7 @@ section:first-of-type nav ul {
   max-width: 196px;
   width: 100%;
   margin: 0 auto;
-  padding-bottom: 8px;
+  padding: 8px 0;
 }
 
 section:first-of-type nav {
@@ -582,7 +593,7 @@ section:first-of-type form button {
   background-image: var(--primaireButton);
   color: var(--primaireButtonText);
   font-family: var(--bodyFamily);
-  font-weight: 700;
+  font-weight: var(--mainButtonBold);
 
   border: none;
   border-radius: 20px;
@@ -623,9 +634,61 @@ main section:first-of-type form fieldset:nth-of-type(3) select {
 
 
 
+
+
 /**********/
 /* SECTION 2 - VIDEO */
 /**********/
+section:nth-of-type(2) {
+  padding: 2em 1em;
+  text-align: center;
+}
+
+section:nth-of-type(2) h2 {
+  
+}
+
+section:nth-of-type(2) p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+section:nth-of-type(2) iframe {
+  max-width: 303px;
+  width: 100%;
+  height: auto;
+
+  display: block;
+  margin: 2em auto;
+  
+  border: 12px solid white;
+  border-radius: 16px;
+
+  box-shadow: 0px 4px 16px rgb(0 0 0 / 15%);
+}
+
+section:nth-of-type(2) a {
+  height: 40px;
+  /* margin: 20px 0; */
+  /* width: var(--mainButton); */
+
+  /* ************************************************************************************************ */
+  /* width pakt ie niet?? */
+  width: 400px;
+  padding: 10px;
+
+  text-decoration: none;
+
+  background-image: var(--primaireButton);
+  color: var(--primaireButtonText);
+  font-family: var(--bodyFamily);
+  font-weight: var(--mainButtonBold);
+  font-size: var(--pSize);
+
+  border: none;
+  border-radius: 20px;
+}
+
 
 
 
@@ -633,6 +696,12 @@ main section:first-of-type form fieldset:nth-of-type(3) select {
 /**********/
 /* SECTION 3 - SLIDER */
 /**********/
+
+section:nth-of-type(3) h2 {
+  /* font size van h3 */
+  font-size: 20px;
+  font-weight: 900;
+}
 
 main section:nth-of-type(3) img {
   width: 100%;
