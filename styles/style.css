@@ -18,8 +18,10 @@
 
   --whiteSpace: 0.75em;
 
-  --mainButton: 220px;
+  --mainButtonW: 220px;
+  --mainButtonH: 40px;
   --mainButtonBold: 700;
+  --mainButtonRadius: 20px;
 
   --primaireButton: linear-gradient(73deg, rgb(0, 51, 204), rgb(0, 91, 255));
 /* transition: none 0s ease 0s  */
@@ -30,21 +32,43 @@
   --secundaireButtonTekst: rgb(0, 70, 228);
   --buttonBackColor: white;
 
+  --navButtonBackColor: white;
+  --menuButtonShadow: rgb(9 17 41 / 10%) 0px 2px 4px;
 
   --verloopje: linear-gradient(179.34deg, rgb(118, 64, 161) 0%, rgb(0, 70, 228) 100%);
+
+  --dividerHeader: 1px solid rgb(228, 232, 236);
 }
 
 
 
 
 @media (prefers-color-scheme:dark) {
-  :root {
+  :root.colorModeChange {
     /* dark theme */
-    --mainBackColor: #333333;
-    --mainSectionColor: #666666;
-    --navBackColor: #666666;
+    --mainBackColor: #666666;
+    --mainSectionColor: #333333; 
+    --navBackColor: #333333;
+
+    --navButtonBackColor: #666666;
 
     --bodyTekst: #f7f7f7;
+
+    --menuButtonShadow: rgba(255, 255, 255, 0.1) 0px 2px 4px;
+
+    --dividerHeader: 1px solid rgb(102, 102, 102);
+  }
+
+  /* :root.colorModeChange {
+    --mainBackColor: #f7f7f7;
+    --mainSectionColor: white;
+    --navBackColor: white;
+
+    --bodyTekst: #253b56;
+  } */
+
+  img.colorModeChange, iframe.colorModeChange {
+    filter: brightness(0);
   }
 }
 
@@ -91,6 +115,10 @@ button, input, select, header nav button, header nav a, header nav label, header
   cursor: pointer;
 }
 
+p a {
+  color: #0046E4;
+  text-decoration: none;
+}
 
 /* component maken? */
 /* .secundaireButton {
@@ -111,13 +139,17 @@ section {
   padding: 32px 0;
 }
 
-main {
+body {
   background-color: var(--mainBackColor);
   top: 0;
   margin-top: -1em;
 }
 
 main > section:nth-of-type(even) {
+  background-color: var(--mainSectionColor);
+}
+
+footer > section:nth-of-type(odd) {
   background-color: var(--mainSectionColor);
 }
 
@@ -158,14 +190,14 @@ header nav {
 }
 
 
-header nav button::before {
+header nav > button::before {
   content:'\2630';
   font-size: 22px;
 }
 
 /* CHANGE */
 /* de class staat op de body niet op de nav */
-body.toonMenu header nav button::before {
+body.toonMenu header nav > button::before {
   content: url("../images/xMenu.svg");
   font-size: 22px;
 }
@@ -204,7 +236,7 @@ header nav ul {
   transition: .5s ease-in-out;
 
   display: grid;
-  grid-template-columns: min-content 1fr;
+  grid-template-columns: min-content 1fr 1fr;
   grid-template-rows: repeat(6, min-content);
   /* grid-template-rows: repeat(52px) ; */
   row-gap: 28px;
@@ -270,9 +302,9 @@ header nav ul li:first-of-type a img {
 
   margin-bottom: 8px;
 
-  border: 2px solid var(--navBackColor);
+  border: 2px solid var(--navButtonBackColor);
   border-radius: 16px;
-  box-shadow: rgb(9 17 41 / 10%) 0px 2px 4px;
+  box-shadow: var(--menuButtonShadow);
 }
 
 /* inloggen */
@@ -291,11 +323,11 @@ header nav ul li:nth-of-type(2) a {
   width: 100px;
   height: 30px;
 
-  border: 2px solid var(--navBackColor);
+  border: 2px solid var(--navButtonBackColor);
   border-radius: 30px;
-  box-shadow: rgb(9 17 41 / 10%) 0px 2px 4px;
+  box-shadow: var(--menuButtonShadow);
 
-  background-color: var(--navBackColor)
+  background-color: var(--navButtonBackColor)
 }
 
 /* taalinstellingen en inloggen naast elkaar */
@@ -319,12 +351,46 @@ header nav ul li:nth-of-type(3) a {
   width: 115px;
   height: 30px;
 
-  border: 2px solid var(--navBackColor);
+  border: 2px solid var(--navButtonBackColor);
   border-radius: 30px;
-  box-shadow: rgb(9 17 41 / 10%) 0px 2px 4px;
+  box-shadow: var(--menuButtonShadow);
 
-  background-color: var(--navBackColor);
+  background-color: var(--navButtonBackColor);
 }
+
+
+
+
+/* lichte / donkere modus */
+header ul li button {
+  font-size: var(--pSize);
+  font-family: var(--bodyFamily);
+  font-weight: var(--mainButtonBold);
+
+  width: var(--mainButtonW);
+  height: var(--mainButtonH);
+  justify-content: center;
+
+  border-radius: var(--mainButtonRadius);
+}
+
+header ul li:nth-of-type(9) button {
+  border: var(--secundaireButton);
+  color: var(--secundaireButtonTekst);
+  /* background-color: var(--navButtonBackColor); */
+  /* grid-column-start: 1;
+  grid-column-end: 2; */
+}
+
+header ul li:last-of-type button {
+  background-image: var(--primaireButton);
+  color: var(--primaireButtonText);
+}
+
+
+
+
+/* HEAD-HEADER */
 
 
 /* logo */
@@ -377,7 +443,7 @@ header div {
 
   /* NEW */
   /* de lijn staat nu hier in plaats van bij de nav (wel boven ipv onder) */
-  border-top: 1px solid rgb(228, 232, 236);
+  border-top: var(--dividerHeader);
   
   /* de div staat onder zijn parent (de nav) en onder de ul (die heeft z-index -1) */
   position: relative;
@@ -434,15 +500,42 @@ main a:first-of-type img {
 /* SECTION 8 - DROPDOWN */
 /**********/
 
+footer section:first-of-type {
+  margin: 32px 12px;
+  
+}
 
+
+
+footer section:first-of-type nav ul {
+  display: flex;
+  justify-content: center;
+
+  list-style: none;
+}
+
+footer section:first-of-type nav ul li a img {
+  width: 36px;
+  height: auto;
+
+  margin: 0 0.5em;
+}
 
 
 /**********/
 /* SECTION 9 - DISCLAIMER */
 /**********/
 
+footer section:last-of-type p {
+  font-size: 12px;
+  color: #B2B2B2;
 
+  text-align: center;
+}
 
+footer p a {
+  color: #1994d7;
+}
 
 /**********************************************************************************************************/
 
@@ -458,7 +551,7 @@ main a:first-of-type img {
 /* SECTION 1  - FORM*/
 /**********/
 
-section:first-of-type {
+main section:first-of-type {
   background-color: var(--mainSectionColor);
   margin: 0 2em;
   padding: 8px 24px;
@@ -473,7 +566,7 @@ section:first-of-type {
   grid-template-columns: 1fr 1fr;
 }
 
-section:first-of-type form fieldset {
+main section:first-of-type form fieldset {
   border-style: none;
 }
 
@@ -500,7 +593,7 @@ main section:first-of-type form input,
 main section:first-of-type form select {
   width: 100%;
   max-width: 264px;
-  height: 40px;
+  height: var(--mainButtonH);
   font-size: var(--pSize);
   font-family: var(--bodyFamily);
   background-color: white;
@@ -526,13 +619,13 @@ main section:first-of-type form select {
 
 
 
-section:first-of-type form fieldset {
+main section:first-of-type form fieldset {
   margin-top: 16px;
 }
 
 
 /* grid */
-section:first-of-type nav ul {
+main section:first-of-type nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
@@ -544,12 +637,12 @@ section:first-of-type nav ul {
   padding: 8px 0;
 }
 
-section:first-of-type nav {
+main section:first-of-type nav {
   grid-column-start: 1;
   grid-column-end: 3;
 }
 
-section:first-of-type nav ul li {
+main section:first-of-type nav ul li {
   max-width: 98px;
   width: 100%;
   font-size: 11px;
@@ -560,43 +653,43 @@ section:first-of-type nav ul li {
   font-family: var(--bodyFamily);
 }
 
-section:first-of-type p {
+main section:first-of-type p {
   grid-column-start: 1;
   grid-column-end: 3;
 }
 
-section:first-of-type form fieldset:first-of-type {
+main section:first-of-type form fieldset:first-of-type {
   grid-column-start: 1;
   grid-column-end: 3;
 }
 
-section:first-of-type div {
+main section:first-of-type div {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-section:first-of-type div input:first-of-type {
+main section:first-of-type div input:first-of-type {
   grid-column-start: 1;
   grid-column-end: 2;
 }
 
-section:first-of-type div input:nth-of-type(2) {
+main section:first-of-type div input:nth-of-type(2) {
   grid-column-start: 2;
   grid-column-end: 3;
 }
 
-section:first-of-type form fieldset:nth-of-type(2) {
+main section:first-of-type form fieldset:nth-of-type(2) {
   grid-column-start: 1;
   grid-column-end: 3;
 }
 
 
-section:first-of-type form fieldset:nth-of-type(3) {
+main section:first-of-type form fieldset:nth-of-type(3) {
   grid-column-start: 1;
   grid-column-end: 3;
 }
 
-section:first-of-type p {
+main section:first-of-type p {
   font-size: 12px;
   text-align: center;
   display: flex;
@@ -609,8 +702,8 @@ section:first-of-type p {
 
 
 /* button  */
-section:first-of-type form button {
-  height: 40px;
+main section:first-of-type form button {
+  height: var(--mainButtonH);
   margin: 20px 0;
   width: 100%;
 
@@ -620,7 +713,7 @@ section:first-of-type form button {
   font-weight: var(--mainButtonBold);
 
   border: none;
-  border-radius: 20px;
+  border-radius: var(--mainButtonRadius);
 }
 
 
@@ -663,7 +756,7 @@ main section:first-of-type form fieldset:nth-of-type(3) select {
 /**********/
 /* SECTION 2 - VIDEO */
 /**********/
-section:nth-of-type(2) {
+main section:nth-of-type(2) {
   padding: 2em 1em;
   text-align: center;
 }
@@ -672,12 +765,12 @@ section:nth-of-type(2) {
   
 } */
 
-section:nth-of-type(2) p {
+main section:nth-of-type(2) p {
   margin-top: 10px;
   font-size: 18px;
 }
 
-section:nth-of-type(2) iframe {
+main section:nth-of-type(2) iframe {
   max-width: 303px;
   width: 100%;
   height: auto;
@@ -691,10 +784,10 @@ section:nth-of-type(2) iframe {
   box-shadow: 0px 4px 16px rgb(0 0 0 / 15%);
 }
 
-section:nth-of-type(2) a {
-  height: 40px;
+main section:nth-of-type(2) a {
+  height: var(--mainButtonH);
   /* margin: 20px 0; */
-  /* width: var(--mainButton); */
+  /* width: var(--mainButtonW); */
 
   /* ************************************************************************************************ */
   /* width pakt ie niet?? */
@@ -710,7 +803,7 @@ section:nth-of-type(2) a {
   font-size: var(--pSize);
 
   border: none;
-  border-radius: 20px;
+  border-radius: var(--mainButtonRadius);
 }
 
 
@@ -756,7 +849,7 @@ main section:nth-of-type(3) article {
   background-color: var(--mainSectionColor);
 }
 
-section:nth-of-type(3) h2 {
+main section:nth-of-type(3) h2 {
   /* font size van h3 */
   font-size: 20px;
   font-weight: 900;
@@ -768,7 +861,7 @@ section:nth-of-type(3) h2 {
   margin-bottom: 15px;
 }
 
-section:nth-of-type(3) p {
+main section:nth-of-type(3) p {
   padding: 0 24px;
   justify-content: center;
 }
@@ -789,7 +882,7 @@ main section:nth-of-type(3) img {
 
 main section:nth-of-type(3) a {
   border: var(--secundaireButton);
-  border-radius: 20px;
+  border-radius: var(--mainButtonRadius);
   color: var(--secundaireButtonTekst);
   background-color: var(--buttonBackColor);
 
@@ -823,26 +916,33 @@ main section:nth-of-type(3) article:not(main section:nth-of-type(3) article:nth-
 /**********/
 /* SECTION 4 - ARTICLES */
 /**********/
-
-main section:nth-of-type(4) img {
-  width: 100%;
+main section:nth-of-type(4) h2 {
+  text-align: center;
 }
 
 
+main section:nth-of-type(4) article {
+  padding: 0 12px;
+  margin: 32px 0;
+  justify-content: center;
+}
 
-/**********/
-/* SECTION 5 - VIDEO TIPS */
-/**********/
+main section:nth-of-type(4) img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* ********************************************************************************************************* vraagje */
+/* er zit een hele kleine witruimte tussen de h3 en de img 
+die ik zelf niet heb opgegeven. waarom?  */
+
+main section:nth-of-type(4) article h3 {
+  /* margin: 16px 16px 0 16px;       deze moet het zijn*/
+  margin: 10px 16px 0 16px;
+}
+
+main section:nth-of-type(4) article p {
+  margin: 10px 16px 0 16px;
+}
 
 
-
-
-/**********/
-/* SECTION 6 - ARTICLE NIEUWS */
-/**********/
-
-
-
-/**********/
-/* SECTION 7 - VRAGEN */
-/**********/

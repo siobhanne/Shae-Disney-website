@@ -34,9 +34,12 @@
 				<li><a href="">Restaurants</a></li>
 				<li><a href="">Tickets en verblijven</a></li>
 				<li><a href="">Bereid je bezoek voor</a></li>
+				<li><button>Lichte modus</button></li>
+				<li><button>Donkere modus</button></li>
 			</ul>
 
-			<a href="index.html"><img src="./images/disneyLogo.svg" alt="Disneyland Paris logo"></a>
+			<!-- hier is een ID voor JS, wordt dat toegestaan? -->
+			<a href="index.html"><img src="./images/disneyLogo.svg" alt="Disneyland Paris logo" id="logo"></a>
 
 			<!-- search -->
 			<label for="search"></label>
@@ -110,10 +113,7 @@
 
 			</form>
 
-
-
-			<p>Op zoek naar het ideale moment om te komen? Vergelijk nu de prijzen!</p>
-			<!-- <a href="https://www.disneylandparis.com/nl-nl/prijsschatting-kalender-disneyland-paris/"></a> -->
+			<p>Op zoek naar het ideale moment om te komen? <a href="https://www.disneylandparis.com/nl-nl/prijsschatting-kalender-disneyland-paris/"> Vergelijk nu de prijzen!</a> </p>
 
 
 		</section>
@@ -135,7 +135,9 @@
 			<!-- Video -->
 			<!-- https://youtu.be/7MUnT2goZJY -->
 			<!-- niet naar vragen -->
-			<iframe src="https://www.youtube.com/embed/7MUnT2goZJY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay></iframe>
+			<iframe src="https://www.youtube.com/embed/7MUnT2goZJY" title="YouTube video player" frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen autoplay></iframe>
 
 			<!-- Primaire button -->
 			<a href="https://www.disneylandparis.com/nl-nl/aanbod/geef-disneyland-paris-cadeau#book">Geef dit cadeau</a>
@@ -213,6 +215,7 @@
 		<section>
 			<h2>Je weet zeker dat alle gezichten gaan stralen</h2>
 
+			<!-- semantische volgorde veranderen met order ivm h3 -->
 			<article>
 				<img src="./images/nieuws_1.jpeg" alt="Een blij gezin van vier mensen met Disney merchandise">
 				<h3>Honderden Disney verhalen</h3>
@@ -254,38 +257,28 @@
 				</p>
 			</article>
 
-			<!-- strik img -->
-			<img src="./images/strikDivider.png" alt="Divider in de vorm van een strik met Minnies haarstrik">
+
 		</section>
 
-
-		<!-- SECTION 7 - VRAGEN -->
-		<section>
-			<h2>Je vragen</h2>
-
-			<!-- uitklap informatie -->
-		</section>
 
 	</main>
 
 
 
 	<footer>
-		<!-- SECTION 8 - DROPDOWN -->
-		<!-- <section>
-			uitklap informatie
+		<!-- SECTION 6 - DROPDOWN -->
+		<section>
+			<!-- uitklap informatie -->
 			<h2>juridische informatie</h2>
 			<a href="">Verkoopvoorwaarden en verzekering</a>
 			<a href="">Verkoopvoorwaarden en verzekering</a>
 			<a href="">Verkoopvoorwaarden en verzekering</a>
-		</section> -->
 
-		<!-- divider -->
-		<h2>Blijf op de hoogte</h2>
+			<!-- divider -->
+			<h2>Blijf op de hoogte</h2>
 
 
-		<!-- Is dit wel een nav? -->
-		<section>
+			<!-- Is dit wel een nav? -->
 			<nav>
 				<ul>
 					<li><a href="https://www.facebook.com/DisneylandParisNL/"><img src="./images/facebook.svg"
@@ -309,14 +302,14 @@
 		</section>
 
 
-		<!-- SECTION 9 - DISCLAIMER -->
+		<!-- SECTION 7 - DISCLAIMER -->
 		<section>
 			<!-- disclaimer -->
 			<p>
 				Afbeeldingen op de website laten de huidige operationele richtlijnen en veiligheids-
 				en gezondheidsmaatregelen (zoals het verplicht dragen van een mondapje en
-				afstandsmaatregelen) niet zien. Kijk op deze pagina voor belangrijke details die
-				je moet weten voor je bezoek
+				afstandsmaatregelen) niet zien. Kijk op deze pagina voor <a href="https://www.disneylandparis.com/nl-nl/gezondheidsmaatregelen/"> belangrijke details die
+				je moet weten voor je bezoek </a>
 			</p>
 			<p>
 				© Disney • Pixar © & TM Lucasfilm Ltd. © MARVEL. Alle rechten voorbehouden
