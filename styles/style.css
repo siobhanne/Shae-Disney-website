@@ -43,7 +43,7 @@
 
 
 
-@media (prefers-color-scheme:dark) {
+/* @media (prefers-color-scheme:dark) { */
   :root.colorModeChange {
     /* dark theme */
     --mainBackColor: #666666;
@@ -59,6 +59,10 @@
     --dividerHeader: 1px solid rgb(102, 102, 102);
   }
 
+  :root.colorModeChange img {
+    filter: brightness(0.75);
+  }
+
   /* :root.colorModeChange {
     --mainBackColor: #f7f7f7;
     --mainSectionColor: white;
@@ -67,10 +71,10 @@
     --bodyTekst: #253b56;
   } */
 
-  img.colorModeChange, iframe.colorModeChange {
+  /* img.colorModeChange, iframe.colorModeChange {
     filter: brightness(0);
-  }
-}
+  } */
+/* } */
 
 
 
@@ -142,7 +146,7 @@ section {
 body {
   background-color: var(--mainBackColor);
   top: 0;
-  margin-top: -1em;
+  /* margin-top: -1em; */
 }
 
 main > section:nth-of-type(even) {
@@ -236,7 +240,7 @@ header nav ul {
   transition: .5s ease-in-out;
 
   display: grid;
-  grid-template-columns: min-content 1fr 1fr;
+  grid-template-columns: min-content 1fr;
   grid-template-rows: repeat(6, min-content);
   /* grid-template-rows: repeat(52px) ; */
   row-gap: 28px;
@@ -416,9 +420,8 @@ header nav.toonSearch a img {
   display: none;
 }
 
-
 header nav label::before {
-  content: url("../images/searchIcon.png");
+  content: url("../images/searchIcon.svg");
 }
 
 
@@ -692,12 +695,7 @@ main section:first-of-type form fieldset:nth-of-type(3) {
 main section:first-of-type p {
   font-size: 12px;
   text-align: center;
-  display: flex;
-  /* flex-wrap: nowrap; */
-  justify-content: center;
-  /* align-items: center; */
   margin: 0 auto 12px auto;
-  /* width: 100%; */
 }
 
 
@@ -761,10 +759,6 @@ main section:nth-of-type(2) {
   text-align: center;
 }
 
-/* section:nth-of-type(2) h2 {
-  
-} */
-
 main section:nth-of-type(2) p {
   margin-top: 10px;
   font-size: 18px;
@@ -787,11 +781,10 @@ main section:nth-of-type(2) iframe {
 main section:nth-of-type(2) a {
   height: var(--mainButtonH);
   /* margin: 20px 0; */
-  /* width: var(--mainButtonW); */
+  width: 300px;
 
   /* ************************************************************************************************ */
   /* width pakt ie niet?? */
-  width: 400px;
   padding: 10px;
 
   text-decoration: none;
@@ -814,13 +807,14 @@ main section:nth-of-type(2) a {
 /* SECTION 3 - SLIDER */
 /**********/
 
-main section:nth-of-type(3) {
-  padding: 32px 23px;
-
-  display: flex;
+/* main section:nth-of-type(3) { */
+  /* padding: 32px 23px; */
+  
+  /* display: block; */
   /* opacity: 0.3; */
   
-}
+  
+/* } */
 
 /* ************************************************************************************ overflow en javascript ?? */
 /* ************************************************************************************ overflow en javascript ?? */
@@ -829,22 +823,30 @@ main section:nth-of-type(3) {
 krijgt de opacity: 1 */
 
 
-main section:nth-of-type(3) nav {
+main section:nth-of-type(3) nav ul {
   display: flex;
-  /* overflow: hidden; */
-  /* width: 100%; */
-;
+  overflow: scroll;
+  width: 100%;
+  
+  /* height: 420px; */
+  /* margin: 10px 0; */
+  padding: 10px 23px;
+  list-style: none;
 }
 
-main section:nth-of-type(3) article {
-  width: 312px;
-  height: 432px;
-  
+main section:nth-of-type(3) ul li {
+  min-width: 312px;
+  min-height: 432px;
+
   margin: 0 8px;
+
+  overflow: hidden;
 
   border-radius: 12px;
   /* controleren wat de echte waardes zijn van de boxshadow */
-  box-shadow: 0px 4px 15px rgb(0 0 0 / 20%);
+  box-shadow: rgb(0 0 0 / 15%) 0px 3px 10px 0px;
+  
+  /* transition: opacity 0.5s linear 0s; */
 
   background-color: var(--mainSectionColor);
 }
@@ -875,6 +877,8 @@ main section:nth-of-type(3) img {
 
 
 
+
+
 /* ************************************************************************************ button style wilt niet ?? */
 /* ************************************************************************************ button style wilt niet ?? */
 
@@ -898,12 +902,9 @@ main section:nth-of-type(3) a {
   /* justify-content: center; */
 }
 
-
-
-/* tijdelijk voor de overflow overscroll thingy */
-
-main section:nth-of-type(3) article:not(main section:nth-of-type(3) article:nth-of-type(1)) {
-  display: none;
+main section:nth-of-type(3) nav button {
+  background-color: pink;
+  margin: 0 50%;
 }
 
 
