@@ -41,7 +41,7 @@ function wordtLicht(event) {
   document.documentElement.classList.remove("colorModeChange");
   document.body.classList.remove("toonMenu");
 
-  document.getElementById('logo').src='../images/disneyLogo.svg';
+  // document.getElementById('logo').src='../images/disneyLogo.svg';
 }
 
 
@@ -54,5 +54,5 @@ function wordtDonker(event) {
   document.documentElement.classList.add("colorModeChange");
   document.body.classList.remove("toonMenu");
 
-  document.getElementById('logo').src='../images/disneylandLogoWhite.png';
+  // document.getElementById('logo').src='../images/disneylandLogoWhite.png';
 }

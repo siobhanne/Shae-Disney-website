@@ -212,6 +212,11 @@ body.toonMenu header nav > button::before {
   font-size: 22px;
 }
 
+.colorModeChange body.toonMenu header nav > button::before {
+  content: url("../images/xMenuWhite.svg");
+}
+
+
 header nav button {
   display: flex;
   flex-direction: column;
@@ -274,10 +279,10 @@ body.toonMenu header nav ul {
 
 /* pijl naar rechts */
 header nav ul li:not(li:nth-of-type(1), li:nth-of-type(2), li:nth-of-type(3)) a::after {
-  content: url("../images/pijlMenu.png");
+  content: url("../images/pijlInfo.svg");
   margin-left: 8px;
   position: relative;
-  top: 4px;
+  top: 2px;
 }
 
 /* alle tekst / A'tjes */
@@ -339,8 +344,6 @@ header nav ul li:nth-of-type(2) a {
 
   background-color: var(--navButtonBackColor)
 }
-
-/* taalinstellingen en inloggen naast elkaar */
 
 
 /* parktijden */
@@ -409,6 +412,10 @@ header nav a img {
   height: auto;
 }
 
+.colorModeChange header nav > a img {
+  content: url("../images/disneylandLogoWhite.png");
+}
+
 
 
 /* HEADER SEARCH */
@@ -422,12 +429,16 @@ header nav.toonSearch input {
   width: 311px;
 }
 
-header nav.toonSearch a img {
+header nav.toonSearch > a img {
   display: none;
 }
 
 header nav label::before {
   content: url("../images/searchIcon.svg");
+}
+
+.colorModeChange header nav label::before {
+  content: url("../images/searchIconWhite.svg"); 
 }
 
 
@@ -471,12 +482,19 @@ header div p {
 header div::before {
   content: url("../images/infoIcon.svg");
   height: 24px;
-  
+}
+
+.colorModeChange header div::before {
+  content: url("../images/infoIconWhite.svg");
 }
 
 header div::after {
   content: url("../images/pijlIcon.svg");
   height: 14px;
+}
+
+.colorModeChange header div::after {
+  content: url("../images/pijlIconWhite.svg");
 }
 
 
@@ -511,10 +529,14 @@ main a:first-of-type img {
 
 footer section:first-of-type {
   margin: 32px 12px;
-  
+  padding: 20px 50px;
 }
 
-
+footer section:first-of-type h2 {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 8px;
+}
 
 footer section:first-of-type nav ul {
   display: flex;
@@ -527,8 +549,53 @@ footer section:first-of-type nav ul li a img {
   width: 36px;
   height: auto;
 
-  margin: 0 0.5em;
+  margin: 0 0.5em 25px;
 }
+
+footer section:first-of-type > a::before {
+  content: url("../images/belIcon.svg");
+  margin-right: 5px;
+}
+
+footer section:first-of-type > a {
+  display: block;
+
+  width: 167px;
+  height: var(--mainButtonH);
+
+  border: 1px solid #d8d8d8;
+  border-radius: 40px;
+
+  text-align: center;
+  padding: 10px 0;
+  margin: 8px auto;
+
+  font-size: 14px;
+  color: var(--bodyTekst);
+
+  text-decoration: none;
+}
+
+footer section:first-of-type > a:hover {
+  border-color: var(--bodyTekst);
+}
+
+
+footer section:first-of-type p:first-of-type {
+  font-size: 13px;
+  text-align: center;
+}
+
+footer section:first-of-type p:last-of-type {
+  color: #B6B6B6;
+  font-size: 11px;
+  text-align: center;
+}
+
+
+
+
+
 
 
 /**********/
@@ -606,6 +673,18 @@ main section:first-of-type form select {
   font-size: var(--pSize);
   font-family: var(--bodyFamily);
   background-color: white;
+}
+
+/* alle selectievakjes: states */
+main section:first-of-type form div input:hover, 
+main section:first-of-type form select:hover {
+  border-color: rgb(0, 70, 228);
+}
+
+main section:first-of-type form div input:focus-visible, 
+main section:first-of-type form select:focus-visible {
+  border-color: rgb(0, 70, 228);
+  outline: none;
 }
 
 
@@ -727,18 +806,6 @@ main section:first-of-type form button:hover {
   background-position: center bottom;
 }
 
-
-
-
-
-
-/* **************************************************************** */
-/* hover reageert op cursor */
-
-main section:first-of-type form button.focus {
-  /* background-image: var(--primaireButtonHover); */
-  background-color: red;
-}
 
 
 /* icoon voor kies je data */
