@@ -27,7 +27,7 @@
 /* transition: none 0s ease 0s  */
   --primaireButtonText: white;
 
-  --primaireButtonHover: linear-gradient(73deg, rgb(3, 43, 164), rgb(4, 71, 200));
+  --primaireButtonHover: linear-gradient(rgb(0, 51, 204), rgb(0, 91, 255) 50%, rgb(3, 43, 164) 50%, rgb(4, 71, 200));
 
   /* transition: none 0s ease 0s  */
   --secundaireButton: 2px solid rgb(0, 70, 228);
@@ -711,7 +711,10 @@ main section:first-of-type form button {
   margin: 20px 0;
   width: 100%;
 
-  background-image: var(--primaireButton);
+  background-image: var(--primaireButtonHover);
+  background-size: 100% 200%;
+  transition: .25s;
+
   color: var(--primaireButtonText);
   font-family: var(--bodyFamily);
   font-weight: var(--mainButtonBold);
@@ -719,6 +722,14 @@ main section:first-of-type form button {
   border: none;
   border-radius: var(--mainButtonRadius);
 }
+
+main section:first-of-type form button:hover {
+  background-position: center bottom;
+}
+
+
+
+
 
 
 /* **************************************************************** */
@@ -796,7 +807,9 @@ main section:nth-of-type(2) iframe {
 main section:nth-of-type(2) a {
   height: var(--mainButtonH);
   /* margin: 20px 0; */
-  width: 300px;
+  min-width: 220px;
+
+  display: inline-block;
 
   /* ************************************************************************************************ */
   /* width pakt ie niet?? */
@@ -804,7 +817,10 @@ main section:nth-of-type(2) a {
 
   text-decoration: none;
 
-  background-image: var(--primaireButton);
+  background-image: var(--primaireButtonHover);
+  background-size: 100% 200%;
+  transition: .25s;
+
   color: var(--primaireButtonText);
   font-family: var(--bodyFamily);
   font-weight: var(--mainButtonBold);
@@ -812,6 +828,12 @@ main section:nth-of-type(2) a {
 
   border: none;
   border-radius: var(--mainButtonRadius);
+
+  /* transition  */
+}
+
+main section:nth-of-type(2) a:hover {
+  background-position: center bottom;
 }
 
 
@@ -854,6 +876,7 @@ main section:nth-of-type(3) ul li {
   min-height: 432px;
 
   margin: 0 8px;
+  padding-bottom: 1.25em;
 
   overflow: hidden;
 
@@ -864,6 +887,10 @@ main section:nth-of-type(3) ul li {
   /* transition: opacity 0.5s linear 0s; */
 
   background-color: var(--mainSectionColor);
+
+
+  display: grid;
+  grid-template-rows: min-content min-content min-content 1fr;
 }
 
 main section:nth-of-type(3) h2 {
@@ -905,6 +932,8 @@ main section:nth-of-type(3) a {
   color: var(--secundaireButtonTekst);
   background-color: var(--buttonBackColor);
 
+  transition: 0.25s;
+
   width: 120px;
   height: 40px;
 
@@ -919,6 +948,8 @@ main section:nth-of-type(3) a {
   display: block;
   position: relative;
 
+  align-self: flex-end;
+
   /* position: relative; */
 
   /* bottom: 0px; */
@@ -927,9 +958,15 @@ main section:nth-of-type(3) a {
   /* align-items: center; */
 }
 
+main section:nth-of-type(3) a:hover {
+  background-color: #F3F2F4;
+}
+
+
 main section:nth-of-type(3) nav button {
+  display:block;
   background-color: pink;
-  margin: 0 50%;
+  margin: 0 auto;
 }
 
 
