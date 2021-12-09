@@ -18,11 +18,22 @@ p {
 
 hr {
 	margin: 14px 0;
+
+	border: none;
+
+	background-image: linear-gradient(to right,
+	rgba(255,255,255,0) 0,
+	#dfdfdf 5%,
+	#dfdfdf 95%,
+	rgba(255,255,255,0) 100%);
+
+	height: 1px;
+	width: 100%;
 }
 
 
 main > section {
-	margin: 10px 12px 0 12px;
+	margin: 5px 12px 0 12px;
 	padding: 0 15px;
 
 	border-radius: 12px;
@@ -75,6 +86,10 @@ main section section {
 /* ONDERDEEL 3  - ARTICLES */
 /**********/
 
+main > section a article {
+	position: relative;
+}
+
 main > section a {
 	text-decoration: none;
 	color: var(--bodyTekst);
@@ -88,6 +103,27 @@ main > section a article h2 {
 
 main > section a article p {
 	padding-bottom: 5px;
+	padding-right: 3em;
+}
+
+main > section a article::after {
+	content: url("../imagesPark/pijlIcon2.svg");
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+main > section a:hover article::after {
+	content: url("../imagesPark/pijlIcon2Hover.svg");
+}
+
+/* .colorModeChange main > section a article::after {
+	content: url("../images/pijlIcon2White.svg");
+} */
+
+main > section a:hover {
+	color: #1994d7;
 }
 
 
@@ -95,23 +131,29 @@ main > section a article p {
 
 
 /**********/
-/* ARTICLE 1  - ATTRACTIE */
+/* ONDERDEEL 4  - MICKEY */
 /**********/
 
+#verderLezen button {
+	border: none;
+	background-color: white;
+	color: #1994d7;
+	font-family: var(--bodyFamily);
+}
 
-
-/**********/
-/* ARTICLE 2  - DRAAK */
-/**********/
-
-
-
-/**********/
-/* ARTICLE 3  - CAFE */
-/**********/
 
 
 
 /**********/
-/* ARTICLE 4  - ATTRACTIE */
+/* ONDERDEEL 5  - SOCIALS DELEN */
 /**********/
+
+main > section nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+}
+
+main > section nav ul li {
+	margin-bottom: 14px;
+}
