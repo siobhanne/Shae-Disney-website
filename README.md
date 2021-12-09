@@ -39,14 +39,14 @@ De surface plane
 https://www.disneylandparis.com/nl-nl/
 
 #### Screenshot(s) van de eerste pagina (small screen): 
-homepagina
-<img src="images/smallscreenHome.PNG" width="375px" alt="homepagina met verschillende film en serie aanbod">
+homepagina + aanbodpagina (combinatie)
+<img src="images/eerstePagina.png" width="375px" alt="Combinatie van homepagina en aanbodpagina met een 'vind prijzen' formulier, video, informatieblokken en artikelen">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 ontdekpagina
-<!-- https://www.disneylandparis.com/nl-nl/belangrijke-informatie/belangrijke-informatie-voor-gasten/ -->
+<!-- https://www.disneylandparis.com/nl-nl/bestemmingen/disneyland-park/ -->
 
-<img src="images/tweede_allesWeten lange ss.png" width="375px" alt="zoekfunctie en ontdek voor inspiratie">
+<img src="images/tweedePagina.png" width="375px" alt="Alles over het Disneyland Park">
  
 </details>
 

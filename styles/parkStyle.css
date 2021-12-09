@@ -1,0 +1,117 @@
+h1 {
+	font-size: 20px;
+	font-weight: 200;
+
+	padding: 15px 0;
+}
+
+h2 {
+	font-size: 20px;
+	font-weight: 200;
+
+	margin-bottom: 15px;
+}
+
+p {
+  font-size: 14px;
+}
+
+hr {
+	margin: 14px 0;
+}
+
+
+main > section {
+	margin: 10px 12px 0 12px;
+	padding: 0 15px;
+
+	border-radius: 12px;
+	box-shadow: var(--sectionShadow);
+}
+
+main > section:nth-of-type(odd) {
+  background-color: var(--mainSectionColor);
+}
+
+
+/**********/
+/* MAIN */
+/**********/
+
+main img {
+  width: 100%;
+}
+
+
+
+/**********/
+/* ONDERDEEL 1  - VOORTEKST */
+/**********/
+
+main > section > p {
+  font-size: 18px;
+}
+
+main > section > p:first-of-type {
+	padding-bottom: 18px;
+}
+
+
+
+
+
+/**********/
+/* ONDERDEEL 2  - OPENINGSTIJDEN */
+/**********/
+
+main section section {
+	background-color: #ebf6fc;
+	margin: 20px -15px;
+	padding: 20px 15px;
+}
+
+
+/**********/
+/* ONDERDEEL 3  - ARTICLES */
+/**********/
+
+main > section a {
+	text-decoration: none;
+	color: var(--bodyTekst);
+}
+
+main > section a article h2 {
+	font-size: 18px;
+	font-weight: 700;
+	margin: 15px 0;
+}
+
+main > section a article p {
+	padding-bottom: 5px;
+}
+
+
+
+
+
+/**********/
+/* ARTICLE 1  - ATTRACTIE */
+/**********/
+
+
+
+/**********/
+/* ARTICLE 2  - DRAAK */
+/**********/
+
+
+
+/**********/
+/* ARTICLE 3  - CAFE */
+/**********/
+
+
+
+/**********/
+/* ARTICLE 4  - ATTRACTIE */
+/**********/
