@@ -54,23 +54,51 @@ function wordtDonker(event) {
 
 
 
-// VERDER LEZEN
-var verderButton = document.querySelector("#verderLezen button");
-var verderTekst = document.querySelector("#verderLezen p");
+// FORM NAVIGATIE 
 
-verderButton.addEventListener("click", leesVerder);
+var verblijfTicketsKnop = document.querySelector("main section section div button:first-of-type");
+var ticketsKnop = document.querySelector("main section section div button:last-of-type");
 
-function leesVerder() {
-  if (verderTekst.innerHTML === "Sommige shows en parades in de parken kunnen worden gewijzigd, vertraagd of geannuleerd zonder dat wij de gasten vooraf hierover kunnen informeren. ...") {
-    verderTekst.innerHTML = "Sommige shows en parades in de parken kunnen worden gewijzigd, vertraagd of geannuleerd zonder dat wij de gasten vooraf hierover kunnen informeren. Dit kan het gevolg zijn van slecht weer, belangrijke werkzaamheden, wijzigingen van openingstijden of sluiting van attracties. Gelukkig zijn er altijd allerlei andere fantastische attracties en activiteiten. Vraag gerust onze Cast Members (Disney medewerkers) om meer informatie!";
-    verderButton.innerHTML = "Toon minder";
-  }
+verblijfTicketsKnop.addEventListener("click", verblijfTickets);
+ticketsKnop.addEventListener("click", tickets);
 
-  else {
-    verderTekst.innerHTML = "Sommige shows en parades in de parken kunnen worden gewijzigd, vertraagd of geannuleerd zonder dat wij de gasten vooraf hierover kunnen informeren. ...";
-    verderButton.innerHTML = "Verder lezen";
-  }
+function verblijfTickets() {
+  document.documentElement.classList.add("showVerblijfTickets");
+  document.documentElement.classList.remove("showTickets");
+  console.log("laat verblijf + tickets zien");
 }
+
+function tickets() {
+  document.documentElement.classList.add("showTickets");
+  document.documentElement.classList.toggle("showVerblijfTickets");
+  console.log("laat tickets zien");
+}
+
+
+
+
+
+
+
+// VERDER LEZEN
+// var verderButton = document.querySelector("#verderLezen button");
+// var verderTekst = document.querySelector("#verderLezen p");
+
+// verderButton.addEventListener("click", leesVerder);
+
+// function leesVerder() {
+//   if (verderTekst.innerHTML === "Sommige shows en parades in de parken kunnen worden gewijzigd, vertraagd of geannuleerd zonder dat wij de gasten vooraf hierover kunnen informeren. ...") {
+//     verderTekst.innerHTML = "Sommige shows en parades in de parken kunnen worden gewijzigd, vertraagd of geannuleerd zonder dat wij de gasten vooraf hierover kunnen informeren. Dit kan het gevolg zijn van slecht weer, belangrijke werkzaamheden, wijzigingen van openingstijden of sluiting van attracties. Gelukkig zijn er altijd allerlei andere fantastische attracties en activiteiten. Vraag gerust onze Cast Members (Disney medewerkers) om meer informatie!";
+//     verderButton.innerHTML = "Toon minder";
+//   }
+
+//   else {
+//     verderTekst.innerHTML = "Sommige shows en parades in de parken kunnen worden gewijzigd, vertraagd of geannuleerd zonder dat wij de gasten vooraf hierover kunnen informeren. ...";
+//     verderButton.innerHTML = "Verder lezen";
+//   }
+// }
+
+
 
 
 

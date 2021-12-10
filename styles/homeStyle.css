@@ -50,7 +50,9 @@ main section:first-of-type section {
   box-sizing: border-box;
   border-radius: 16px;
   box-shadow: 0px 4px 32px rgb(0 0 0 / 10%);
+}
 
+main section:first-of-type section:first-of-type {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -126,7 +128,7 @@ main section:first-of-type form fieldset {
 
 
 /* FORM NAV - VERBLIJF + TICKETS */
- #formNav {
+ .formNav {
   list-style: none;
   display: flex;
   justify-content: center;
@@ -138,12 +140,12 @@ main section:first-of-type form fieldset {
   padding: 8px 0 0 0;
 }
 
-#formNav {
+.formNav {
   grid-column-start: 1;
   grid-column-end: 3;
 }
 
-#formNav button {
+.formNav button {
   max-width: 98px;
   width: 100%;
   font-size: 11px;
@@ -157,7 +159,7 @@ main section:first-of-type form fieldset {
   border: none;
 }
 
-#formNav button:first-of-type {
+.formNav button:first-of-type {
   color: #004BE9;
   border-bottom: 2px solid #004BE9;
   padding-bottom: 1em;
@@ -169,6 +171,25 @@ main section:first-of-type form fieldset {
 /* ********************************************************************************************************* */
 /* FORM NAV - TICKETS */
 
+.showTickets main section:first-of-type section:first-of-type {
+  display: none;
+}
+
+.showTickets main section:first-of-type section:last-of-type {
+  display: block;
+}
+
+
+.showVerblijfTickets main section:first-of-type section:first-of-type {
+  display: block;
+}
+
+.showVerblijfTickets main section:first-of-type section:last-of-type {
+  display: none;
+}
+
+
+
 main section:first-of-type section:last-of-type {
   display: none;
 }
@@ -176,6 +197,78 @@ main section:first-of-type section:last-of-type {
 
 
 
+main section:first-of-type section:last-of-type nav {
+  width: 230px;
+  margin: 0 auto;
+}
+
+main section:first-of-type section:last-of-type nav ul {
+  list-style: none;
+  
+}
+
+main section:first-of-type section:last-of-type nav ul li a {
+  height: 6.75em;
+  
+  
+  border: 1px solid rgb(216, 216, 216);
+  border-radius: 1em;
+
+  display: grid;
+  grid-template-columns: 4.25em 1fr;
+  grid-template-rows: 18px 1fr;
+  
+  
+  margin: 1em 0;
+  padding: 0.8em 0;
+
+  text-decoration: none;
+  color: var(--bodyTekst);
+}
+
+main section:first-of-type section:last-of-type nav ul li img {
+  width: 4.25em;
+
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
+
+  z-index: 1;
+  order: -1;
+
+  margin-left: 0.3em;
+}
+
+main section:first-of-type section:last-of-type nav ul li h2 {
+  font-size: var(--pSize);
+
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  
+  text-align: left;
+
+  padding-left: 0.8em;
+}
+
+main section:first-of-type section:last-of-type nav ul li p {
+  font-size: 12px;
+
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+ 
+  margin: 0.7em 0 0 0.8em;
+  height: 48px;
+
+  text-align: left;
+  width: 119px;
+  /* width em komt niet overeen met dezelfde hoeveelheid (op schaal) pixels */
+  
+}
 
 
 
@@ -315,7 +408,7 @@ main section:nth-of-type(2) iframe {
   box-shadow: 0px 4px 16px rgb(0 0 0 / 15%);
 }
 
-main section:nth-of-type(2) a {
+main > section:nth-of-type(2) a {
   height: var(--mainButtonH);
   /* margin: 20px 0; */
   min-width: 220px;
