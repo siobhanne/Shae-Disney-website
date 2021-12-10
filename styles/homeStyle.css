@@ -35,6 +35,12 @@ main > section:nth-of-type(even) {
 /**********/
 
 main section:first-of-type {
+  margin: 0;
+  padding: 0;
+
+}
+
+main section:first-of-type section {
   background-color: var(--mainSectionColor);
   margin: 0 2em;
   padding: 8px 24px;
@@ -119,25 +125,25 @@ main section:first-of-type form fieldset {
 }
 
 
-/* grid */
-main section:first-of-type nav ul {
+/* FORM NAV - VERBLIJF + TICKETS */
+ #formNav {
   list-style: none;
   display: flex;
   justify-content: center;
-  border-bottom: 2px solid #004BE9;
+  border-bottom: 2px solid rgba(32, 34, 73, 0.1);;
 
   max-width: 196px;
   width: 100%;
   margin: 0 auto;
-  padding: 8px 0;
+  padding: 8px 0 0 0;
 }
 
-main section:first-of-type nav {
+#formNav {
   grid-column-start: 1;
   grid-column-end: 3;
 }
 
-main section:first-of-type nav ul li {
+#formNav button {
   max-width: 98px;
   width: 100%;
   font-size: 11px;
@@ -146,8 +152,34 @@ main section:first-of-type nav ul li {
   justify-content: center;
 
   font-family: var(--bodyFamily);
+  
+  background-color: transparent;
+  border: none;
 }
 
+#formNav button:first-of-type {
+  color: #004BE9;
+  border-bottom: 2px solid #004BE9;
+  padding-bottom: 1em;
+}
+
+
+/* ********************************************************************************************************* */
+/* **********************************************************************   HIER WAS JE   ********** */
+/* ********************************************************************************************************* */
+/* FORM NAV - TICKETS */
+
+main section:first-of-type section:last-of-type {
+  display: none;
+}
+
+
+
+
+
+
+
+/* grid */
 main section:first-of-type p {
   grid-column-start: 1;
   grid-column-end: 3;
@@ -467,6 +499,7 @@ main section:nth-of-type(3) nav button {
 /**********/
 main section:nth-of-type(4) h2 {
   text-align: center;
+  padding: 0.75em;
 }
 
 

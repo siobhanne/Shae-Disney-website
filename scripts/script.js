@@ -61,16 +61,37 @@ var verderTekst = document.querySelector("#verderLezen p");
 verderButton.addEventListener("click", leesVerder);
 
 function leesVerder() {
-    document.querySelector("#verderLezen p").innerHTML = "Sommige shows en parades in de parken kunnen worden gewijzigd, vertraagd of geannuleerd zonder dat wij de gasten vooraf hierover kunnen informeren. Dit kan het gevolg zijn van slecht weer, belangrijke werkzaamheden, wijzigingen van openingstijden of sluiting van attracties. Gelukkig zijn er altijd allerlei andere fantastische attracties en activiteiten. Vraag gerust onze Cast Members (Disney medewerkers) om meer informatie!";
-    document.querySelector("#verderLezen button").innerHTML = "Toon minder";  
-    verderButton.addEventListener("click", toonMinder);
-    console.log("verder lezen");  
+  if (verderTekst.innerHTML === "Sommige shows en parades in de parken kunnen worden gewijzigd, vertraagd of geannuleerd zonder dat wij de gasten vooraf hierover kunnen informeren. ...") {
+    verderTekst.innerHTML = "Sommige shows en parades in de parken kunnen worden gewijzigd, vertraagd of geannuleerd zonder dat wij de gasten vooraf hierover kunnen informeren. Dit kan het gevolg zijn van slecht weer, belangrijke werkzaamheden, wijzigingen van openingstijden of sluiting van attracties. Gelukkig zijn er altijd allerlei andere fantastische attracties en activiteiten. Vraag gerust onze Cast Members (Disney medewerkers) om meer informatie!";
+    verderButton.innerHTML = "Toon minder";
+  }
+
+  else {
+    verderTekst.innerHTML = "Sommige shows en parades in de parken kunnen worden gewijzigd, vertraagd of geannuleerd zonder dat wij de gasten vooraf hierover kunnen informeren. ...";
+    verderButton.innerHTML = "Verder lezen";
+  }
 }
 
-function toonMinder() {
-  document.querySelector("#verderLezen p").innerHTML = "Sommige shows en parades in de parken kunnen worden gewijzigd, vertraagd of geannuleerd zonder dat wij de gasten vooraf hierover kunnen informeren. ...";
-  document.querySelector("#verderLezen button").innerHTML = "Verder lezen";  
-  console.log("Toon minder");
 
-  verderButton.addEventListener("click", leesVerder);
-}
+
+// OPENINGSTIJDEN 
+// Bron: https://tecadmin.net/get-current-date-time-javascript/
+
+// var today = new Date();
+// var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+
+// var deTijd = document.querySelector("#openingstijden");
+
+// const d = new Date();
+// var date = new Date();
+// date.toLocaleDateString('es-MX');
+
+
+// var date = new Date();
+
+
+// const d = new Date("January 25 2015");
+// d.toDateString('nl-NL');
+// let text = d.toLocaleDateString('nl-NL');
+
+// document.getElementById("openingstijden").innerHTML = d;

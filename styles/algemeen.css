@@ -119,9 +119,28 @@ p a:hover, #verderLezen button:hover {
   text-decoration: underline;
 }
 
+hr {
+	margin: 14px 0;
+
+	border: none;
+
+	background-image: linear-gradient(to right,
+	rgba(255,255,255,0) 0,
+	#dfdfdf 5%,
+	#dfdfdf 95%,
+	rgba(255,255,255,0) 100%);
+
+	height: 1px;
+	width: 100%;
+}
 
 section {
   padding: 32px 0;
+}
+
+/* section:not() werkte niet */
+footer section:last-of-type {
+  padding: 0 0 32px 0;
 }
 
 body {
@@ -487,6 +506,33 @@ main a:first-of-type img {
 /* SECTION 8 - DROPDOWN */
 /**********/
 
+footer section nav:first-of-type h2 {
+  width: 100%;
+  padding: 1em 0;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+footer section nav:first-of-type h2::after {
+  content: url("../images/pijlDown.svg");
+  position: absolute;
+  right: 2em;
+}
+
+footer section nav:first-of-type ul li {
+  display: none;
+}
+
+
+
+
+
+
+
+/**********/
+/* SECTION ... - SOCIALS */
+/**********/
+
 footer section:first-of-type {
   margin: 32px 12px;
   padding: 20px 50px;
@@ -501,14 +547,14 @@ footer section:first-of-type h2 {
   margin-bottom: 8px;
 }
 
-footer section:first-of-type nav ul {
+footer section:first-of-type nav:nth-of-type(2) ul {
   display: flex;
   justify-content: center;
 
   list-style: none;
 }
 
-footer section:first-of-type nav ul li a img {
+footer section:first-of-type nav:nth-of-type(2) ul li a img {
   width: 36px;
   height: auto;
 

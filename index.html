@@ -65,62 +65,63 @@
 
 		<!-- SECTION 1 - FORM -->
 		<section>
-			<nav>
-				<ul>
-					<!-- Mag eigenlijk geen div zijn! -->
-					<div>
-						<li>Verblijf + Tickets</li>
-						<li>Tickets</li>
-					</div>
-				</ul>
-			</nav>
+			<section>
+				<div id="formNav">
+					<button>Verblijf + Tickets</button>
+					<button>Tickets</button>
+				</div>
 
-			<form>
-				<fieldset>
-					<legend>Kies je data</legend>
-					<div>
-						<input type="date" name="aankomstdatum" value="Aankomstdatum" min="2021-11-25">
-						<input type="date" name="vertrekdatum" value="vertrekdatum" min="2021-11-26">
-					</div>
-				</fieldset>
+				<form>
+					<fieldset>
+						<legend>Kies je data</legend>
+						<div>
+							<input type="date" name="aankomstdatum" value="Aankomstdatum" min="2021-11-25">
+							<input type="date" name="vertrekdatum" value="vertrekdatum" min="2021-11-26">
+						</div>
+					</fieldset>
 
-				<fieldset autofocus>
-					<legend>Hotels & Resorts</legend>
-					<select id="HotelsResorts" name="HotelsResorts">
-						<option value="alleHotels">Alle Hotels</option>
-						<option value="Disney's Davy Crockett Ranch">Disney's Davy Crockett Ranch</option>
-						<option value="Disney's Hotel New York">Disney's Hotel New York</option>
-						<option value="Disney's Sequoia Lodge">Disney's Sequoia Lodge</option>
-						<option value="Disney's Hotel Santa Fe">Disney's Hotel Santa Fe</option>
-						<option value="Dream Castle Fabulous Hotels Group">Dream Castle Fabulous Hotels Group
-						</option>
-					</select>
-				</fieldset>
+					<fieldset autofocus>
+						<legend>Hotels & Resorts</legend>
+						<select id="HotelsResorts" name="HotelsResorts">
+							<option value="alleHotels">Alle Hotels</option>
+							<option value="Disney's Davy Crockett Ranch">Disney's Davy Crockett Ranch</option>
+							<option value="Disney's Hotel New York">Disney's Hotel New York</option>
+							<option value="Disney's Sequoia Lodge">Disney's Sequoia Lodge</option>
+							<option value="Disney's Hotel Santa Fe">Disney's Hotel Santa Fe</option>
+							<option value="Dream Castle Fabulous Hotels Group">Dream Castle Fabulous Hotels Group
+							</option>
+						</select>
+					</fieldset>
 
-				<fieldset>
-					<legend>Kamers en gasten</legend>
-					<select id="kamersGasten" name="kamersGasten">
-						<option value="1 kamer 2 Gasten">1 kamer 2 Gasten</option>
-						<option value="1 kamer 1 gast">1 kamer 1 gast</option>
-						<option value="1 kamer 3 gasten">1 kamer 3 gasten</option>
-						<option value="1 kamer 4 gasten">1 kamer 4 gasten</option>
-						<option value="2 kamers 5 gasten">2 kamers 5 gasten</option>
-						<option value="2 kamer 6 gasten">2 kamer 6 gasten</option>
-					</select>
-				</fieldset>
+					<fieldset>
+						<legend>Kamers en gasten</legend>
+						<select id="kamersGasten" name="kamersGasten">
+							<option value="1 kamer 2 Gasten">1 kamer 2 Gasten</option>
+							<option value="1 kamer 1 gast">1 kamer 1 gast</option>
+							<option value="1 kamer 3 gasten">1 kamer 3 gasten</option>
+							<option value="1 kamer 4 gasten">1 kamer 4 gasten</option>
+							<option value="2 kamers 5 gasten">2 kamers 5 gasten</option>
+							<option value="2 kamer 6 gasten">2 kamer 6 gasten</option>
+						</select>
+					</fieldset>
 
 
-				<!-- Primaire button -->
-				<button type="submit">Vind prijzen</button>
+					<!-- Primaire button -->
+					<button type="submit">Vind prijzen</button>
 
-			</form>
+				</form>
 
-			<p>Op zoek naar het ideale moment om te komen? <a
-					href="https://www.disneylandparis.com/nl-nl/prijsschatting-kalender-disneyland-paris/"> Vergelijk nu
-					de prijzen!</a> </p>
+				<p>Op zoek naar het ideale moment om te komen? <a
+						href="https://www.disneylandparis.com/nl-nl/prijsschatting-kalender-disneyland-paris/">
+						Vergelijk nu
+						de prijzen!</a> </p>
+			</section>
 
-
+			<section>
+				blablabla
+			</section>
 		</section>
+
 
 
 
@@ -280,15 +281,39 @@
 		<!-- SECTION 6 - DROPDOWN -->
 		<section>
 			<!-- uitklap informatie -->
-			<!-- <nav>
+			<nav>
+				<h2>Juridische informatie</h2>
 				<ul>
-			<h2>juridische informatie</h2>
-			<a href="">Verkoopvoorwaarden en verzekering</a>
-			<a href="">Verkoopvoorwaarden en verzekering</a>
-			<a href="">Verkoopvoorwaarden en verzekering</a>
-		</ul>
-		</nav> -->
+					<li><a href="">Verkoopvoorwaarden en verzekering</a></li>
+				</ul>
 
+				<h2>Help</h2>
+				<ul>
+					<li><a href="">Brochure en Prijstabellen</a></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+
+				<h2>Meer Disneyland Paris</h2>
+				<ul>
+					<li><a href="">Mobiele app</a></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+
+				<h2>Gerelateerde Disney sites</h2>
+				<ul>
+					<li><a href="">Disney.com</a></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+
+			</nav>
+
+			<hr>
 			<!-- divider -->
 			<h2>Blijf op de hoogte</h2>
 
