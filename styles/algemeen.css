@@ -393,7 +393,7 @@ header nav.toonSearch > a img {
   display: none;
 }
 
-header nav input::before {
+header nav label::before {
   content: url("../images/searchIcon.svg");
 }
 

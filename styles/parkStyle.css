@@ -136,7 +136,7 @@ main > section a:hover {
 
 #verderLezen button {
 	border: none;
-	background-color: white;
+	background-color: transparent;
 	color: #1994d7;
 	font-family: var(--bodyFamily);
 }
