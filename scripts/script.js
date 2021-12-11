@@ -23,6 +23,7 @@ var deSearch = document.querySelector("nav label");
 deSearch.addEventListener("click", toggleSearch);
 
 function toggleSearch(event) {
+  // niet naar vragen
   searchBalk = event.target.parentNode;
   searchBalk.classList.toggle("toonSearch");
 }
@@ -56,25 +57,47 @@ function wordtDonker(event) {
 
 // FORM NAVIGATIE 
 
-var verblijfTicketsKnop = document.querySelector("main section section div button:first-of-type");
-var ticketsKnop = document.querySelector("main section section div button:last-of-type");
+// var verblijfTicketsKnop = document.querySelector("main section section div button:first-of-type");
+// var ticketsKnop = document.querySelector("main section section div button:last-of-type");
+
+// verblijfTicketsKnop.addEventListener("click", verblijfTickets);
+// ticketsKnop.addEventListener("click", tickets);
+
+// function verblijfTickets() {
+//   document.documentElement.classList.add("showVerblijfTickets");
+//   document.documentElement.classList.remove("showTickets");
+//   console.log("laat verblijf + tickets zien");
+// }
+
+// function tickets() {
+//   document.documentElement.classList.toggle("showTickets");
+//   document.documentElement.classList.toggle("showVerblijfTickets");
+//   console.log("laat tickets zien");
+// }
+
+// var ticketsKnop = document.getElementById("formNav").querySelector(" button:last-of-type ");
+
+var verblijfTicketsKnop = document.querySelector(".formNav button:first-of-type");
+var ticketsKnop = document.querySelector(".formNav button:last-of-type");
+
+
+// var verblijfTicketsKnop = document.querySelector("main section section div button:first-of-type");
+// var ticketsKnop = document.querySelector("main section section div button:last-of-type");
 
 verblijfTicketsKnop.addEventListener("click", verblijfTickets);
 ticketsKnop.addEventListener("click", tickets);
 
-function verblijfTickets() {
-  document.documentElement.classList.add("showVerblijfTickets");
-  document.documentElement.classList.remove("showTickets");
+function verblijfTickets(event) {
+  document.body.classList.add("showVerblijfTickets");
+  document.body.classList.remove("showTickets");
   console.log("laat verblijf + tickets zien");
 }
 
-function tickets() {
-  document.documentElement.classList.add("showTickets");
-  document.documentElement.classList.toggle("showVerblijfTickets");
+function tickets(event) {
+  document.body.classList.add("showTickets");
+  document.body.classList.remove("showVerblijfTickets");
   console.log("laat tickets zien");
 }
-
-
 
 
 
