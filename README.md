@@ -86,11 +86,10 @@ En hoe krijg ik zo'n mooie radius in de afbeelding van tinkerbel?
 ### Agenda voor meeting
 samen met je groepje opstellen
 
-| student 1      | student 2          | student 3    | student 4        |
-| ---            | ---                | ---          | ---              |
-| uitwerking socials gedeelte  | hoe ik het plaatje en de tekst zo mooi uitgelijnd krijg             | de search button (is een <a>) toevoegen    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | de footer fixen | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
+| student 1      | student 2          | student 3    | 
+| ---            | ---                | ---          | 
+| uitwerking socials gedeelte  | hoe ik het plaatje en de tekst zo mooi uitgelijnd krijg             | de search button (is een <a>) toevoegen    | 
+| ... | ... | de footer fixen |
 
 
 ### Verslag van meeting
