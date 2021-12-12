@@ -79,25 +79,28 @@ De twee parken: Disneyland Park
 
 ### Stand van zaken
 hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+Ik heb de eerste viewport af. daar ben ik heel blij mee.
+Alleen schaalt het formulier nu nog niet lekker mee.
+En hoe krijg ik zo'n mooie radius in de afbeelding van tinkerbel?
 
 ### Agenda voor meeting
 samen met je groepje opstellen
 
 | student 1      | student 2          | student 3    | student 4        |
 | ---            | ---                | ---          | ---              |
-| uitwerking socials gedeelte  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
+| uitwerking socials gedeelte  | hoe ik het plaatje en de tekst zo mooi uitgelijnd krijg             | de search button (is een <a>) toevoegen    | en dan ik dat    |
+| en dat ook nog | dit als er tijd is | de footer fixen | dit wil ik zeker |
 | ...            | ...                | ...          | ...              |
 
 
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- Afbeelding tinkerbel moet in de header (dit is later afgekeurd door Sanne de week later)
+- de articles van de slider worden ul / li's ipv een nav met article tags erin.
+- linkje voor de afbeelding radius: https://bennettfeely.com/clippy/ 
+    (dit werkte uiteindelijk toch niet voor wat ik wilde dus heb ik het zelf gedaan in de app Figma)
+
 
 </details>
 
