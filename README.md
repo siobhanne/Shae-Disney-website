@@ -12,7 +12,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Jij
 
-<details>
+<details open>
 <summary>uitwerken voor kick-off werkgroep</summary>
 
 ### Auteur:
@@ -32,7 +32,7 @@ De surface plane
 
 ## Je website
 
-<details open>
+<details>
 <summary>uitwerken voor kick-off werkgroep</summary>
 
 ### Je opdracht:
@@ -43,7 +43,7 @@ homepagina + aanbodpagina (combinatie)
 <img src="images/eerstePagina.png" width="375px" alt="Combinatie van homepagina en aanbodpagina met een 'vind prijzen' formulier, video, informatieblokken en artikelen">
 
 #### Screenshot(s) van de tweede pagina (small screen):
-ontdekpagina
+De twee parken: Disneyland Park
 <!-- https://www.disneylandparis.com/nl-nl/bestemmingen/disneyland-park/ -->
 
 <img src="images/tweedePagina.png" width="375px" alt="Alles over het Disneyland Park">
@@ -58,7 +58,7 @@ ontdekpagina
 <summary>uitwerken na afloop 2e werkgroep</summary>
 
 ### de hele pagina: 
-<img src="./images/breakdownschets_mobiel.png" width="375px" alt="breakdown van de hele pagina">
+<img src="./images/homeBreakdownSchetsMobiel.png" width="375px" alt="breakdown van de hele pagina">
 
 ### dynamisch deel (van het menu): 
 <img src="./images/breakdownschets_menuUit_mobiel.png" width="375px" alt="breakdown van een dynamisch deel">
@@ -86,7 +86,7 @@ samen met je groepje opstellen
 
 | student 1      | student 2          | student 3    | student 4        |
 | ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
+| uitwerking socials gedeelte  | en dit             | en ik dit    | en dan ik dat    |
 | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
 | ...            | ...                | ...          | ...              |
 
@@ -238,5 +238,6 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 3. ...
 
 https://css-tricks.com/almanac/properties/b/box-shadow/
+https://stackoverflow.com/questions/20321202/not-showing-placeholder-for-input-type-date-field
 
 </details>

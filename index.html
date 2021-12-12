@@ -15,7 +15,7 @@
 
 
 <body>
-	<!-- <h1>invisible heading one</h1> -->
+	<h1>invisible heading one</h1>
 
 	<header>
 		<nav>
@@ -24,17 +24,13 @@
 			<ul>
 				<li><a href="https://www.disneylandparis.com/language-selection/"><img src="./images/settingMenu.svg"
 							alt="taalinstellingen laat Nederlandse vlag zien"></a></li>
-				<!-- ::before -->
 				<li><a href="https://www.disneylandparis.com/nl-nl/my-disneyland/login">Inloggen</a></li>
 				<li><a href="https://www.disneylandparis.com/nl-nl/agenda/park-tijden/">Parktijden</a></li>
-				<!-- ::after .. pijltje -->
-				<!-- text-transform: uppercase -->
-				<!-- nogmaals uitklapbaar menu .. moet je ECHT ook namaken ?? -->
 				<li><a href="disneypark.html">De 2 parken</a></li>
-				<li><a href="">Hotels & resorts</a></li>
-				<li><a href="">Restaurants</a></li>
-				<li><a href="">Tickets en verblijven</a></li>
-				<li><a href="">Bereid je bezoek voor</a></li>
+				<li><a href="https://www.disneylandparis.com/nl-nl/disney-hotels/">Hotels & resorts</a></li>
+				<li><a href="https://www.disneylandparis.com/nl-nl/restaurants/eten-in-disneyland-paris/">Restaurants</a></li>
+				<li><a href="https://www.disneylandparis.com/nl-nl/aanbiedingen/">Tickets en verblijven</a></li>
+				<li><a href="https://www.disneylandparis.com/nl-nl/plattegronden/">Bereid je bezoek voor</a></li>
 				<li><button>Lichte modus</button></li>
 				<li><button>Donkere modus</button></li>
 			</ul>
@@ -75,9 +71,9 @@
 					<fieldset>
 						<legend>Kies je data</legend>
 						<div>
-							<!-- placeholder="Aankomstdatum" -->
-							<input type="date" name="aankomstdatum" value="Aankomstdatum" min="2021-11-25">
-							<input type="date" name="vertrekdatum" value="vertrekdatum" min="2021-11-26">
+							<!-- Bron: https://stackoverflow.com/questions/20321202/not-showing-placeholder-for-input-type-date-field -->
+							<input type="text" onfocus="(this.type='date')" name="aankomstdatum" value="Aankomstdatum" min="2021-12-12">
+							<input type="text" onfocus="(this.type='date')" name="vertrekdatum" value="vertrekdatum" min="2021-12-13">
 						</div>
 					</fieldset>
 
@@ -394,6 +390,7 @@
 	</footer>
 
 	<script src="scripts/script.js"></script>
+	<script src="scripts/homeScript.js"></script>
 </body>
 
 

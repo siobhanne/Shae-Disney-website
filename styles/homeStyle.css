@@ -3,6 +3,17 @@
 /* ALGEMENE STIJLEN */
 /**********/
 
+/* niet naar vragen
+bron van Adam */
+h1 {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
 
 h2 {
   font-size: 24px;
@@ -132,7 +143,7 @@ main section:first-of-type form fieldset {
   list-style: none;
   display: flex;
   justify-content: center;
-  border-bottom: 2px solid rgba(32, 34, 73, 0.1);;
+  border-bottom: 2px solid rgba(32, 34, 73, 0.1);
 
   max-width: 196px;
   width: 100%;
@@ -163,6 +174,7 @@ main section:first-of-type form fieldset {
   color: #004BE9;
   border-bottom: 2px solid #004BE9;
   padding-bottom: 1em;
+  transform: translateY(2px);
 }
 
 .showTickets .formNav button:first-of-type {
@@ -175,6 +187,7 @@ main section:first-of-type form fieldset {
   color: #004BE9;
   border-bottom: 2px solid #004BE9;
   padding-bottom: 1em;
+  /* transform: translateY(2px); */
 }
 
 /* ********************************************************************************************************* */
@@ -183,20 +196,16 @@ main section:first-of-type form fieldset {
 /* FORM NAV - TICKETS */
 
 .showTickets .formNav {
-  /* margin-top: 3em; */
   margin-bottom: 2em;
-  /* z-index: -20; */
 }
 
 .showTickets main section:first-of-type section:last-of-type:not(.formNav) {
   display: block;
-  top: -80px;
+  top: -65px;
   position: relative;
 }
 
 .showTickets main section:first-of-type section:first-of-type form {
-  background-color: darkcyan;
-  /* width: 0; height: 0; */
   display: none;
 }
 
@@ -501,7 +510,7 @@ krijgt de opacity: 1 */
 
 main section:nth-of-type(3) nav ul {
   display: flex;
-  overflow: scroll;
+  overflow: auto;
   width: 100%;
   
   /* height: 420px; */

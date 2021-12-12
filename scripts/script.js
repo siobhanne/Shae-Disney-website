@@ -55,71 +55,25 @@ function wordtDonker(event) {
 
 
 
-// FORM NAVIGATIE 
-
-// var verblijfTicketsKnop = document.querySelector("main section section div button:first-of-type");
-// var ticketsKnop = document.querySelector("main section section div button:last-of-type");
-
-// verblijfTicketsKnop.addEventListener("click", verblijfTickets);
-// ticketsKnop.addEventListener("click", tickets);
-
-// function verblijfTickets() {
-//   document.documentElement.classList.add("showVerblijfTickets");
-//   document.documentElement.classList.remove("showTickets");
-//   console.log("laat verblijf + tickets zien");
-// }
-
-// function tickets() {
-//   document.documentElement.classList.toggle("showTickets");
-//   document.documentElement.classList.toggle("showVerblijfTickets");
-//   console.log("laat tickets zien");
-// }
-
-// var ticketsKnop = document.getElementById("formNav").querySelector(" button:last-of-type ");
-
-var verblijfTicketsKnop = document.querySelector(".formNav button:first-of-type");
-var ticketsKnop = document.querySelector(".formNav button:last-of-type");
-
-
-// var verblijfTicketsKnop = document.querySelector("main section section div button:first-of-type");
-// var ticketsKnop = document.querySelector("main section section div button:last-of-type");
-
-verblijfTicketsKnop.addEventListener("click", verblijfTickets);
-ticketsKnop.addEventListener("click", tickets);
-
-function verblijfTickets(event) {
-  document.body.classList.add("showVerblijfTickets");
-  document.body.classList.remove("showTickets");
-  console.log("laat verblijf + tickets zien");
-}
-
-function tickets(event) {
-  document.body.classList.add("showTickets");
-  document.body.classList.remove("showVerblijfTickets");
-  console.log("laat tickets zien");
-}
-
-
-
-
 
 // VERDER LEZEN
-// var verderButton = document.querySelector("#verderLezen button");
-// var verderTekst = document.querySelector("#verderLezen p");
+var verderButton = document.querySelector("#verderLezen button");
+var verderTekst = document.querySelector("#verderLezen p");
 
-// verderButton.addEventListener("click", leesVerder);
+verderButton.addEventListener("click", leesVerder);
 
-// function leesVerder() {
-//   if (verderTekst.innerHTML === "Sommige shows en parades in de parken kunnen worden gewijzigd, vertraagd of geannuleerd zonder dat wij de gasten vooraf hierover kunnen informeren. ...") {
-//     verderTekst.innerHTML = "Sommige shows en parades in de parken kunnen worden gewijzigd, vertraagd of geannuleerd zonder dat wij de gasten vooraf hierover kunnen informeren. Dit kan het gevolg zijn van slecht weer, belangrijke werkzaamheden, wijzigingen van openingstijden of sluiting van attracties. Gelukkig zijn er altijd allerlei andere fantastische attracties en activiteiten. Vraag gerust onze Cast Members (Disney medewerkers) om meer informatie!";
-//     verderButton.innerHTML = "Toon minder";
-//   }
+function leesVerder() {
+  if (verderTekst.innerHTML === "Sommige shows en parades in de parken kunnen worden gewijzigd, vertraagd of geannuleerd zonder dat wij de gasten vooraf hierover kunnen informeren. ...") {
+    verderTekst.innerHTML = "Sommige shows en parades in de parken kunnen worden gewijzigd, vertraagd of geannuleerd zonder dat wij de gasten vooraf hierover kunnen informeren. Dit kan het gevolg zijn van slecht weer, belangrijke werkzaamheden, wijzigingen van openingstijden of sluiting van attracties. Gelukkig zijn er altijd allerlei andere fantastische attracties en activiteiten. Vraag gerust onze Cast Members (Disney medewerkers) om meer informatie!";
+    verderButton.innerHTML = "Toon minder";
+  }
 
-//   else {
-//     verderTekst.innerHTML = "Sommige shows en parades in de parken kunnen worden gewijzigd, vertraagd of geannuleerd zonder dat wij de gasten vooraf hierover kunnen informeren. ...";
-//     verderButton.innerHTML = "Verder lezen";
-//   }
-// }
+  else {
+    verderTekst.innerHTML = "Sommige shows en parades in de parken kunnen worden gewijzigd, vertraagd of geannuleerd zonder dat wij de gasten vooraf hierover kunnen informeren. ...";
+    verderButton.innerHTML = "Verder lezen";
+  }
+}
+
 
 
 
@@ -130,6 +84,8 @@ function tickets(event) {
 
 // var today = new Date();
 // var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+// document.getElementById("hedendag").value = date;
+// console.log(date);
 
 // var deTijd = document.querySelector("#openingstijden");
 

@@ -110,6 +110,7 @@ button, input, select, header nav button, header nav a, header nav label, header
   cursor: pointer;
 }
 
+
 p a {
   color: #0046E4;
   text-decoration: none;
@@ -159,8 +160,6 @@ footer > section:nth-of-type(odd) {
 /* NAVIGATIE / HEADER */
 /**********/
 
-/* NEW */
-/* de hele header staat op z-index 100 en dus boven de main */
 header {
   position: relative;
   z-index: 100;
@@ -179,6 +178,9 @@ header nav {
   padding: 10px;
 }
 
+header nav.toonSearch > button {
+  margin-right: auto;
+}
 
 header nav > button::before {
   content:'\2630';
@@ -207,9 +209,6 @@ header nav button {
   background-color: transparent;
   border: none;
   appearance:none;
-
-  /* z-index: 100; */
-  /* position: absolute; */
 }
 
 header nav ul {
@@ -230,8 +229,8 @@ header nav ul {
   transition: .5s ease-in-out;
 
   display: grid;
-  grid-template-columns: min-content 1fr;
-  grid-template-rows: repeat(6, min-content);
+  grid-template-columns: min-content 1fr 1fr;
+  grid-template-rows: repeat(8, min-content);
   /* grid-template-rows: repeat(52px) ; */
   row-gap: 28px;
   column-gap: 1em;
@@ -273,7 +272,7 @@ header nav a {
   font-size: var(--pSize);
 }
 
-/* alle li'tjes */
+/* GRID */
 header nav ul li {
   /* margin-bottom: 42px; */
   grid-column-start: 1;
@@ -286,6 +285,11 @@ header nav ul li:first-of-type {
 
 header nav ul li:nth-of-type(2) {
   grid-column-start: 2;
+}
+
+header ul li:last-of-type {
+  grid-column-start: 3;
+  grid-column-end: 4;
 }
 
 
@@ -338,7 +342,6 @@ header nav ul li:nth-of-type(3) a {
   font-size: 14px;
   font-weight: 600;
   text-transform: none;
-  /* color: #8A9BAE; */
 
   width: 115px;
   height: 30px;
@@ -359,25 +362,31 @@ header ul li button {
   font-family: var(--bodyFamily);
   font-weight: var(--mainButtonBold);
 
-  width: var(--mainButtonW);
+  /* width: var(--mainButtonW); */
+  width: 200px;
   height: var(--mainButtonH);
+
+  margin-top: 2em;
+
   justify-content: center;
 
   border-radius: var(--mainButtonRadius);
 }
 
+/* ************************************************************************************ */
+
 header ul li:nth-of-type(9) button {
   border: var(--secundaireButton);
   color: var(--secundaireButtonTekst);
-  /* background-color: var(--navButtonBackColor); */
-  /* grid-column-start: 1;
-  grid-column-end: 2; */
+  /* margin-top: 2em; */
 }
 
 header ul li:last-of-type button {
   background-image: var(--primaireButton);
   color: var(--primaireButtonText);
 }
+
+
 
 
 
@@ -400,7 +409,11 @@ header nav a img {
 /* HEADER SEARCH */
 header nav input {
   display: none;
-  /* transition: 1s ease; */
+}
+
+header nav.toonSearch label {
+  margin-left: auto;
+  margin-right: 0.5em;
 }
 
 header nav.toonSearch input {
@@ -413,7 +426,7 @@ header nav.toonSearch > a img {
 }
 
 header nav label::before {
-  content: url("../images/searchIcon.svg");
+  content: url("../images/searchIcon.svg"); 
 }
 
 .colorModeChange header nav label::before {
@@ -519,6 +532,10 @@ footer section nav:first-of-type h2::after {
   right: 2em;
 }
 
+.colorModeChange footer section nav:first-of-type h2::after {
+  content: url("../images/pijlDownWhite.svg");
+}
+
 footer section nav:first-of-type ul li {
   display: none;
 }
@@ -564,6 +581,10 @@ footer section:first-of-type nav:nth-of-type(2) ul li a img {
 footer section:first-of-type > a::before {
   content: url("../images/belIcon.svg");
   margin-right: 5px;
+}
+
+.colorModeChange footer section:first-of-type > a::before {
+  content: url("../images/belIconWhite.svg");
 }
 
 footer section:first-of-type > a {

@@ -12,6 +12,10 @@ h2 {
 	margin-bottom: 15px;
 }
 
+footer h2 {
+	font-weight: 800;
+}
+
 p {
   font-size: 14px;
 }
@@ -79,6 +83,10 @@ main section section {
 	background-color: #ebf6fc;
 	margin: 20px -15px;
 	padding: 20px 15px;
+}
+
+.colorModeChange main section section {
+	background-color: #253b56;
 }
 
 
