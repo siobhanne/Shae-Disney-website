@@ -126,9 +126,7 @@ main > section a:hover article::after {
 	content: url("../imagesPark/pijlIcon2Hover.svg");
 }
 
-/* .colorModeChange main > section a article::after {
-	content: url("../images/pijlIcon2White.svg");
-} */
+
 
 main > section a:hover {
 	color: #1994d7;
